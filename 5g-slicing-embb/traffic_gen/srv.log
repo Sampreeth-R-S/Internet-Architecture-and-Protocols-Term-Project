@@ -1,0 +1,16 @@
+-----------------------------------------------------------
+Server listening on 5222
+-----------------------------------------------------------
+Accepted connection from 10.45.0.1, port 39900
+[  5] local 10.45.0.1 port 5222 connected to 10.45.0.1 port 54994
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-1.00   sec  2.31 MBytes  19.4 Mbits/sec  0.143 ms  0/74 (0%)  
+[  5]   1.00-2.00   sec  2.38 MBytes  19.9 Mbits/sec  0.103 ms  0/76 (0%)  
+[  5]   2.00-2.04   sec  96.0 KBytes  19.2 Mbits/sec  0.100 ms  0/3 (0%)  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-2.04   sec  4.78 MBytes  19.6 Mbits/sec  0.100 ms  0/153 (0%)  receiver
+iperf3: interrupt - the server has terminated
+-----------------------------------------------------------
+Server listening on 5222
+-----------------------------------------------------------

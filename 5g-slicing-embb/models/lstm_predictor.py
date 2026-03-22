@@ -1,0 +1,201 @@
+"""
+LSTM-based short-term traffic predictor for eMBB slice.
+Input:  sliding window of historical throughput (24 steps = 2 min)
+Output: predicted throughput for next 6 steps (30 seconds)
+
+Usage:
+    python3 lstm_predictor.py
+"""
+import numpy as np
+import pandas as pd
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader, TensorDataset
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+import matplotlib
+matplotlib.use('Agg')  # Non-interactive backend
+import matplotlib.pyplot as plt
+import os
+import json
+import random
+
+
+WINDOW_SIZE = 24      # Past 24 steps (2 minutes at 5s intervals)
+HORIZON = 6           # Predict 6 steps ahead (30 seconds)
+HIDDEN_SIZE = 64
+NUM_LAYERS = 2
+EPOCHS = 100
+BATCH_SIZE = 32
+LR = 0.001
+WEIGHT_DECAY = 1e-4
+TEST_RATIO = 0.15
+SEED = 42
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+class TrafficLSTM(nn.Module):
+    def __init__(self, input_size=1, hidden_size=64, num_layers=2, output_size=6):
+        super().__init__()
+        self.lstm = nn.LSTM(input_size, hidden_size, num_layers,
+                            batch_first=True, dropout=0.2)
+        self.fc = nn.Sequential(
+            nn.Linear(hidden_size, 32),
+            nn.ReLU(),
+            nn.Linear(32, output_size)
+        )
+
+    def forward(self, x):
+        _, (hn, _) = self.lstm(x)
+        return self.fc(hn[-1])
+
+
+def create_sequences(data, window, horizon):
+    X, y = [], []
+    for i in range(len(data) - window - horizon + 1):
+        X.append(data[i:i + window])
+        y.append(data[i + window:i + window + horizon])
+    return np.array(X), np.array(y)
+
+
+def set_seed(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+
+
+def scale_2d(array, scaler):
+    return scaler.transform(array.reshape(-1, 1)).reshape(array.shape)
+
+
+def train_and_evaluate():
+    set_seed(SEED)
+
+    # Load data
+    data_path = os.path.join(BASE_DIR, '..', 'data', 'embb_traffic_timeseries.csv')
+    df = pd.read_csv(data_path)
+    values = df['throughput_mbps'].values.astype(np.float32)
+
+    # Create sequences
+    X, y = create_sequences(values, WINDOW_SIZE, HORIZON)
+
+    # Chronological split: train / test
+    n_samples = len(X)
+    train_end = int((1.0 - TEST_RATIO) * n_samples)
+
+    X_train, X_test = X[:train_end], X[train_end:]
+    y_train, y_test = y[:train_end], y[train_end:]
+
+    # Fit scaler only on train partition to avoid data leakage.
+    scaler = MinMaxScaler()
+    scaler.fit(X_train.reshape(-1, 1))
+
+    X_train = scale_2d(X_train, scaler)
+    X_test = scale_2d(X_test, scaler)
+    y_train = scale_2d(y_train, scaler)
+    y_test = scale_2d(y_test, scaler)
+
+    # To tensors
+    X_train_t = torch.FloatTensor(X_train).unsqueeze(-1)
+    y_train_t = torch.FloatTensor(y_train)
+    X_test_t = torch.FloatTensor(X_test).unsqueeze(-1)
+
+    train_loader = DataLoader(TensorDataset(X_train_t, y_train_t),
+                              batch_size=BATCH_SIZE, shuffle=True)
+
+    # Model
+    model = TrafficLSTM(1, HIDDEN_SIZE, NUM_LAYERS, HORIZON)
+    criterion = nn.SmoothL1Loss(beta=0.1)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=WEIGHT_DECAY)
+
+    # Train
+    losses = []
+
+    print("Training:")
+    for epoch in range(EPOCHS):
+        model.train()
+        epoch_loss = 0
+        for xb, yb in train_loader:
+            pred = model(xb)
+            loss = criterion(pred, yb)
+            optimizer.zero_grad()
+            loss.backward()
+            nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+            optimizer.step()
+            epoch_loss += loss.item()
+        avg_loss = epoch_loss / len(train_loader)
+        losses.append(avg_loss)
+
+        if (epoch + 1) % 10 == 0:
+            print(
+                f"  Epoch {epoch+1}/{EPOCHS} | "
+                f"Train Loss: {avg_loss:.6f}"
+            )
+
+    # Evaluate
+    model.eval()
+    with torch.no_grad():
+        preds = model(X_test_t).numpy()
+
+    # Inverse scaling back to Mbps.
+    preds_inv = scaler.inverse_transform(preds.reshape(-1, 1)).reshape(preds.shape)
+    y_test_inv = scaler.inverse_transform(y_test.reshape(-1, 1)).reshape(y_test.shape)
+
+    mae = mean_absolute_error(y_test_inv.flatten(), preds_inv.flatten())
+    rmse = np.sqrt(mean_squared_error(y_test_inv.flatten(), preds_inv.flatten()))
+
+    print(f"\nResults:")
+    print(f"MAE:  {mae:.4f} Mbps")
+    print(f"RMSE: {rmse:.4f} Mbps")
+
+    # Save model
+    save_dir = os.path.join(BASE_DIR, 'saved')
+    os.makedirs(save_dir, exist_ok=True)
+    torch.save(model.state_dict(), os.path.join(save_dir, 'lstm_embb.pth'))
+
+    # Save scaler params and metrics
+    metrics = {
+        'mae': float(mae),
+        'rmse': float(rmse),
+        'window': WINDOW_SIZE,
+        'horizon': HORIZON,
+        'epochs': EPOCHS,
+        'hidden_size': HIDDEN_SIZE,
+        'test_ratio': TEST_RATIO
+    }
+    with open(os.path.join(save_dir, 'metrics.json'), 'w') as f:
+        json.dump(metrics, f, indent=2)
+
+    np.save(os.path.join(save_dir, 'scaler_min.npy'), scaler.min_)
+    np.save(os.path.join(save_dir, 'scaler_scale.npy'), scaler.scale_)
+
+    # Plot
+    viz_dir = os.path.join(BASE_DIR, '..', 'visualization')
+    os.makedirs(viz_dir, exist_ok=True)
+
+    fig, axes = plt.subplots(2, 1, figsize=(14, 8))
+    axes[0].plot(losses)
+    axes[0].set_title('Training Loss')
+    axes[0].set_xlabel('Epoch')
+    axes[0].set_ylabel('SmoothL1 Loss')
+    axes[0].legend(['Train'])
+    axes[0].grid(True, alpha=0.3)
+
+    axes[1].plot(y_test_inv[:100, 0], label='Actual', alpha=0.8)
+    axes[1].plot(preds_inv[:100, 0], label='Predicted', alpha=0.8)
+    axes[1].set_title('Prediction vs Actual (first 100 test samples, step-1)')
+    axes[1].set_xlabel('Sample')
+    axes[1].set_ylabel('Throughput (Mbps)')
+    axes[1].legend()
+    axes[1].grid(True, alpha=0.3)
+
+    plt.tight_layout()
+    plt.savefig(os.path.join(viz_dir, 'lstm_results.png'), dpi=150)
+    print(f"\nPlot saved → {os.path.join(viz_dir, 'lstm_results.png')}")
+
+    return model, scaler
+
+
+if __name__ == '__main__':
+    train_and_evaluate()

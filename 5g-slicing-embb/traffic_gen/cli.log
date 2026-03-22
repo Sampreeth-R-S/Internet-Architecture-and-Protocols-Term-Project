@@ -1,0 +1,11 @@
+Connecting to host 10.45.0.1, port 5222
+[  5] local 10.45.0.1 port 54994 connected to 10.45.0.1 port 5222
+[ ID] Interval           Transfer     Bitrate         Total Datagrams
+[  5]   0.00-1.00   sec  2.41 MBytes  20.1 Mbits/sec  77  
+[  5]   1.00-2.00   sec  2.38 MBytes  20.0 Mbits/sec  76  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-2.00   sec  4.78 MBytes  20.0 Mbits/sec  0.000 ms  0/153 (0%)  sender
+[  5]   0.00-2.04   sec  4.78 MBytes  19.6 Mbits/sec  0.100 ms  0/153 (0%)  receiver
+
+iperf Done.

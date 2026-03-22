@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+cmake-build-release/
+*.so
+*.o
+*.pth
+*.npy
+.vscode/
+.idea/
+data/media/
+*.bin
+*.json
