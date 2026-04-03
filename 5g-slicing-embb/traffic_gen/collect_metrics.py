@@ -56,20 +56,24 @@ def discover_monitor_interfaces(interface_arg):
     return [interface_arg]
 
 
-def select_active_interface(current_stats, previous_stats, candidates):
-    """Pick interface with the highest byte delta for current interval."""
-    best_iface = None
-    best_delta = -1
+def aggregate_interface_deltas(current_stats, previous_stats, candidates):
+    """Sum byte and packet deltas across all monitored interfaces."""
+    total_rx_bytes = 0
+    total_tx_bytes = 0
+    total_rx_packets = 0
+    total_tx_packets = 0
+
     for iface in candidates:
         if iface not in current_stats or iface not in previous_stats:
             continue
-        rx, tx, _, _ = current_stats[iface]
-        prx, ptx, _, _ = previous_stats[iface]
-        delta = max(0, (rx - prx) + (tx - ptx))
-        if delta > best_delta:
-            best_delta = delta
-            best_iface = iface
-    return best_iface
+        rx, tx, rxp, txp = current_stats[iface]
+        prx, ptx, prxp, ptxp = previous_stats[iface]
+        total_rx_bytes += max(0, rx - prx)
+        total_tx_bytes += max(0, tx - ptx)
+        total_rx_packets += max(0, rxp - prxp)
+        total_tx_packets += max(0, txp - ptxp)
+
+    return total_rx_bytes, total_tx_bytes, total_rx_packets, total_tx_packets
 
 
 def get_active_ues():
@@ -115,21 +119,19 @@ def main():
                 curr_stats = read_interface_stats()
                 active_ues = get_active_ues()
 
-                iface = select_active_interface(curr_stats, prev_stats, monitor_ifaces)
-                if iface and iface in curr_stats:
-                    rx, tx, rxp, txp = curr_stats[iface]
-                    prx, ptx, prxp, ptxp = prev_stats.get(iface, (rx, tx, rxp, txp))
-                else:
-                    # Fallback to zeros when no candidate interface is available.
+                rx_delta, tx_delta, rxp_delta, txp_delta = aggregate_interface_deltas(
+                    curr_stats, prev_stats, monitor_ifaces
+                )
+
+                # Calculate aggregate rates across all monitored interfaces.
+                throughput = (rx_delta + tx_delta) * 8 / (args.interval * 1e6)
+                pkt_rate = (rxp_delta + txp_delta) / args.interval
+                iface = 'aggregate'
+
+                if rx_delta == 0 and tx_delta == 0 and rxp_delta == 0 and txp_delta == 0:
                     iface = 'none'
-                    rx, tx, rxp, txp = 0, 0, 0, 0
-                    prx, ptx, prxp, ptxp = 0, 0, 0, 0
 
-                # Calculate rates
-                throughput = (max(0, (rx - prx) + (tx - ptx))) * 8 / (args.interval * 1e6)
-                pkt_rate = max(0, (rxp - prxp) + (txp - ptxp)) / args.interval
-
-                writer.writerow([time.time(), rx, tx, rxp, txp,
+                writer.writerow([time.time(), rx_delta, tx_delta, rxp_delta, txp_delta,
                                  round(throughput, 4), round(pkt_rate, 2), active_ues, iface])
                 f.flush()
 

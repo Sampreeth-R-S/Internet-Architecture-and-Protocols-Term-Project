@@ -33,6 +33,8 @@ if [ "${#UE_IFACES[@]}" -lt 5 ]; then
  exit 1
 fi
 
+
+
 if ! command -v curl >/dev/null 2>&1; then
  echo "Error: curl is required. Install it and retry."
  exit 1
@@ -75,12 +77,23 @@ if ip -4 addr show | grep -q "inet ${SERVER_IP}/"; then
 fi
 
 HTTP_SERVER_PID=""
+CURRENT_CLIENT_PIDS=()
+INTERRUPTED=0
 cleanup() {
+ if [ "${#CURRENT_CLIENT_PIDS[@]}" -gt 0 ]; then
+  kill "${CURRENT_CLIENT_PIDS[@]}" 2>/dev/null || true
+ fi
  if [ -n "$HTTP_SERVER_PID" ]; then
  kill "$HTTP_SERVER_PID" 2>/dev/null || true
  fi
 }
-trap cleanup EXIT SIGINT SIGTERM
+on_interrupt() {
+ INTERRUPTED=1
+ cleanup
+ exit 130
+}
+trap cleanup EXIT
+trap on_interrupt INT TERM
 
 if [ "$SERVER_IS_LOCAL" -eq 1 ]; then
  echo "Starting local HTTP server on ${SERVER_IP}:${SERVER_PORT}"
@@ -97,6 +110,11 @@ else
 fi
 
 URL="http://${SERVER_IP}:${SERVER_PORT}/${MEDIA_FILE}"
+
+if ! command -v socat >/dev/null 2>&1; then
+ echo "Error: socat is required. Install with: sudo apt install socat"
+ exit 1
+fi
 
 # ABR-like per-user profiles in Mbps (5 users)
 UE0_PROFILE=(24 30 36 28 34 26 38 29 35 27)
@@ -120,7 +138,7 @@ echo "Target URL: $URL"
 echo "UE interfaces: ${UE_IFACES[*]}"
 echo "Segment duration: ${SEGMENT_DURATION}s | Segments: ${SEGMENT_COUNT}"
 if [ "$SERVER_IS_LOCAL" -eq 1 ]; then
- echo "Mode: Local server (UE bind disabled for local endpoint stability)"
+ echo "Mode: Local server (UE interface binding enabled)"
 else
  echo "Mode: Remote server (UE interface binding enabled)"
 fi
@@ -129,12 +147,16 @@ echo ""
 echo "timestamp,segment,ue,iface,rate_mbps,bytes,status,duration_ms" > "$CSV_OUT"
 
 for ((segment=0; segment<SEGMENT_COUNT; segment++)); do
+ if [ "$INTERRUPTED" -ne 0 ]; then
+  break
+ fi
+
  idx=$((segment % PROFILE_LEN))
  rates=("${UE0_PROFILE[$idx]}" "${UE1_PROFILE[$idx]}" "${UE2_PROFILE[$idx]}" "${UE3_PROFILE[$idx]}" "${UE4_PROFILE[$idx]}")
 
  echo "[$(date '+%Y-%m-%d %H:%M:%S')] Segment $((segment+1))/${SEGMENT_COUNT} | rates: ${rates[*]} Mbps"
 
- CLIENT_PIDS=()
+ CURRENT_CLIENT_PIDS=()
  for ue in 0 1 2 3 4; do
  iface="${UE_IFACES[$ue]}"
  rate_mbps="${rates[$ue]}"
@@ -160,22 +182,20 @@ for ((segment=0; segment<SEGMENT_COUNT; segment++)); do
  ts=$(date +%s)
  t0_ms=$(date +%s%3N)
  status="ok"
+ 
+ iface_ip=$(ip -4 -o addr show dev "$iface" 2>/dev/null | awk '{split($4,a,"/"); print a[1]; exit}')
+ if [ -z "$iface_ip" ]; then
+  status="fail"
+  t1_ms=$(date +%s%3N)
+  dur_ms=$((t1_ms - t0_ms))
+  echo "${ts},$((segment+1)),$((ue+1)),${iface},${rate_mbps},${bytes},${status},${dur_ms}" >> "$CSV_OUT"
+  exit 0
+ fi
 
- if [ "$SERVER_IS_LOCAL" -eq 1 ]; then
- if ! curl --silent --show-error --fail \
- --max-time $((SEGMENT_DURATION + 8)) \
- --range "${start}-${end}" \
- "$URL" -o /dev/null; then
- status="fail"
- fi
- else
- if ! curl --silent --show-error --fail \
- --max-time $((SEGMENT_DURATION + 8)) \
- --interface "$iface" \
- --range "${start}-${end}" \
- "$URL" -o /dev/null; then
- status="fail"
- fi
+ http_request="GET /${MEDIA_FILE} HTTP/1.1\r\nHost: ${SERVER_IP}:${SERVER_PORT}\r\nRange: bytes=${start}-${end}\r\nConnection: close\r\n\r\n"
+
+ if ! echo -ne "$http_request" | socat - TCP:${SERVER_IP}:${SERVER_PORT},bind=${iface_ip} 2>/dev/null | head -n 1 | grep -q "200\|206"; then
+  status="fail"
  fi
 
  t1_ms=$(date +%s%3N)
@@ -183,15 +203,26 @@ for ((segment=0; segment<SEGMENT_COUNT; segment++)); do
  echo "${ts},$((segment+1)),$((ue+1)),${iface},${rate_mbps},${bytes},${status},${dur_ms}" >> "$CSV_OUT"
  ) &
 
- CLIENT_PIDS+=("$!")
+ CURRENT_CLIENT_PIDS+=("$!")
  done
 
- for pid in "${CLIENT_PIDS[@]}"; do
+ for pid in "${CURRENT_CLIENT_PIDS[@]}"; do
  wait "$pid"
+ if [ "$INTERRUPTED" -ne 0 ]; then
+  break
+ fi
  done
+
+ if [ "$INTERRUPTED" -ne 0 ]; then
+  break
+ fi
 
  sleep "$THINK_TIME"
 done
 
-echo "=== Streaming Simulation Complete ==="
+if [ "$INTERRUPTED" -ne 0 ]; then
+ echo "=== Streaming Simulation Stopped ==="
+else
+ echo "=== Streaming Simulation Complete ==="
+fi
 echo "Session metrics: $CSV_OUT"
