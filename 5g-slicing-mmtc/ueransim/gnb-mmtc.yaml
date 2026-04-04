@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 mcc: '999'
 mnc: '70'
 nci: '0x000000020'
@@ -16,3 +17,23 @@ slices:
     sd: 0x000002
 
 ignoreStreamIds: true
+=======
+mcc: '999'
+mnc: '70'
+nci: '0x000000020'
+idLength: 32
+tac: 1
+linkIp: 127.0.0.2
+ngapIp: 127.0.0.2
+gtpIp: 127.0.0.2
+
+amfConfigs:
+  - address: 127.0.0.5
+    port: 38412
+
+slices:
+  - sst: 1
+    sd: 0x000002
+
+ignoreStreamIds: true
+>>>>>>> d7e5ce9f407c4039a9955cd4e8aa4162b84a16e1

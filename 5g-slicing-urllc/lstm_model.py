@@ -72,7 +72,11 @@ def train_and_evaluate():
     set_seed(SEED)
 
     # Load data
+<<<<<<< HEAD
     data_path = os.path.join(BASE_DIR, 'data', 'Training_data.csv')
+=======
+    data_path = "./training_data.csv"
+>>>>>>> d7e5ce9f407c4039a9955cd4e8aa4162b84a16e1
     df = pd.read_csv(data_path)
     df.columns = df.columns.str.strip()
     df['latency_ms'] = pd.to_numeric(df['latency_ms'], errors='coerce')
