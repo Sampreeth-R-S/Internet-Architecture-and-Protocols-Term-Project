@@ -5,18 +5,19 @@ import struct
 import time
 from collections import defaultdict
 
-SERVER_IP = "10.45.0.10"
+SERVER_IP = "10.46.0.10"
 PORT = 5202
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind((SERVER_IP, PORT))
 
-print(f"Server listening on {SERVER_IP}:{PORT}")
+# print(f"Server listening on {SERVER_IP}:{PORT}")
 
 last_seq = defaultdict(lambda: -1)
 received = defaultdict(int)
 lost = defaultdict(int)
 
+print(f"ip,seq,latency_ms,recv,lost")
 while True:
     data, addr = sock.recvfrom(4096)
 
@@ -38,5 +39,4 @@ while True:
     last_seq[client] = seq
     received[client] += 1
 
-    print(f"[{client}] seq={seq} latency={latency_ms:.2f} ms "
-          f"recv={received[client]} lost={lost[client]}")
+    print(f"{client},{seq},{latency_ms:.2f},{received[client]},{lost[client]}")
