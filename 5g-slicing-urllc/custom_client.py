@@ -7,30 +7,18 @@ import random
 import struct
 import os
 
-<<<<<<< HEAD
 SERVER_IP = "10.45.0.10"
-=======
-SERVER_IP = "10.46.0.10"
->>>>>>> d7e5ce9f407c4039a9955cd4e8aa4162b84a16e1
 BASE_PORT = 5202
 
 NUM_USERS = 5
 TOTAL_DURATION = 3000
 
 UE_IPS = [
-<<<<<<< HEAD
     "10.45.0.30",
     "10.45.0.31",
     "10.45.0.32",
     "10.45.0.33",
     "10.45.0.34"
-=======
-    "10.45.0.2",
-    "10.45.0.3",
-    "10.45.0.4",
-    "10.45.0.5",
-    "10.45.0.6"
->>>>>>> d7e5ce9f407c4039a9955cd4e8aa4162b84a16e1
 ]
 
 PACKET_SIZES = [64, 128, 256, 512, 1024] * 20
@@ -75,22 +63,13 @@ def run_ue(ue_index):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     # ✅ Step 1: Bind to UE IP
-<<<<<<< HEAD
     sock.bind((ue_ip, 0))
-=======
-    # sock.bind((ue_ip, 0))
->>>>>>> d7e5ce9f407c4039a9955cd4e8aa4162b84a16e1
 
     # ✅ Step 2: Bind to interface (AFTER IP bind)
     try:
     #    pass
-<<<<<<< HEAD
         sock.setsockopt(socket.SOL_SOCKET, 25, iface.encode())
         # bind_socket_to_interface(sock,iface)
-=======
-        # sock.setsockopt(socket.SOL_SOCKET, 25, iface.encode())
-        bind_socket_to_interface(sock,iface)
->>>>>>> d7e5ce9f407c4039a9955cd4e8aa4162b84a16e1
     except Exception as e:
         print(f"[UE{ue_index+1}] Interface bind failed: {e}")
 
@@ -126,11 +105,7 @@ def run_ue(ue_index):
             #delay_ms = random.uniform(5, 10)
 
         delay_ms = max(0, min(10, delay_ms))
-<<<<<<< HEAD
         busy_wait_delay(delay_ms / 1000.0)
-=======
-        # busy_wait_delay(delay_ms / 1000.0)
->>>>>>> d7e5ce9f407c4039a9955cd4e8aa4162b84a16e1
 
 
         try:
