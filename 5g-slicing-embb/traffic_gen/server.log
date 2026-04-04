@@ -1,0 +1,16 @@
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 10.45.0.1, port 51004
+[  5] local 10.45.0.1 port 5201 connected to 10.45.0.1 port 51016
+[ ID] Interval           Transfer     Bitrate
+[  5]   0.00-1.00   sec  5.12 GBytes  44.0 Gbits/sec                  
+[  5]   1.00-2.00   sec  8.44 GBytes  72.5 Gbits/sec                  
+[  5]   2.00-2.37   sec  3.07 GBytes  71.4 Gbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate
+[  5]   0.00-2.37   sec  16.6 GBytes  60.3 Gbits/sec                  receiver
+iperf3: interrupt - the server has terminated
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
