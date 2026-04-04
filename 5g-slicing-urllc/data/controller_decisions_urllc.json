@@ -1,0 +1,2682 @@
+[
+  {
+    "timestamp": "2026-04-05T01:32:11.541260",
+    "action": "hold",
+    "trigger_latency": 0.73,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.542483",
+    "action": "hold",
+    "trigger_latency": 0.71,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.543404",
+    "action": "hold",
+    "trigger_latency": 0.73,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.547004",
+    "action": "hold",
+    "trigger_latency": 0.75,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.549291",
+    "action": "hold",
+    "trigger_latency": 0.7,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.550428",
+    "action": "hold",
+    "trigger_latency": 0.74,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.551305",
+    "action": "hold",
+    "trigger_latency": 0.73,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.553192",
+    "action": "hold",
+    "trigger_latency": 0.71,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.559620",
+    "action": "hold",
+    "trigger_latency": 0.7,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.561417",
+    "action": "hold",
+    "trigger_latency": 0.72,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.562480",
+    "action": "hold",
+    "trigger_latency": 0.7,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.563548",
+    "action": "hold",
+    "trigger_latency": 0.69,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.564400",
+    "action": "hold",
+    "trigger_latency": 0.73,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.565232",
+    "action": "hold",
+    "trigger_latency": 0.72,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.566134",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.567020",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.567888",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.571463",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.572411",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.575006",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.576231",
+    "action": "hold",
+    "trigger_latency": 0.69,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.577490",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.579558",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.580477",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.581309",
+    "action": "hold",
+    "trigger_latency": 0.68,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.582181",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.583054",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.583915",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.587982",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.588965",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.589838",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.594004",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.595859",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.597167",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.598158",
+    "action": "hold",
+    "trigger_latency": 0.68,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.599036",
+    "action": "hold",
+    "trigger_latency": 0.74,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.599883",
+    "action": "hold",
+    "trigger_latency": 0.73,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.600675",
+    "action": "hold",
+    "trigger_latency": 0.7,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.604412",
+    "action": "hold",
+    "trigger_latency": 0.69,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.608550",
+    "action": "hold",
+    "trigger_latency": 0.7,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.610393",
+    "action": "hold",
+    "trigger_latency": 0.67,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.611552",
+    "action": "hold",
+    "trigger_latency": 0.68,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.612392",
+    "action": "hold",
+    "trigger_latency": 0.73,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.613579",
+    "action": "hold",
+    "trigger_latency": 0.75,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.614438",
+    "action": "hold",
+    "trigger_latency": 0.73,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.615269",
+    "action": "hold",
+    "trigger_latency": 0.72,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.616134",
+    "action": "hold",
+    "trigger_latency": 0.71,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.616989",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.617806",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.618664",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.619677",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.620682",
+    "action": "hold",
+    "trigger_latency": 0.55,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.627253",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.628934",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.630130",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.631135",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.631976",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.632783",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.633595",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.634359",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.635980",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.636736",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.637500",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.640579",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.644758",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.646424",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.647390",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.648116",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.648841",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.649569",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.650565",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.651244",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.655096",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.657431",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.661422",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.662766",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.663732",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.664466",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.665204",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.665934",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.666639",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.667330",
+    "action": "hold",
+    "trigger_latency": 0.55,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.668674",
+    "action": "hold",
+    "trigger_latency": 0.53,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.669486",
+    "action": "hold",
+    "trigger_latency": 0.52,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.670206",
+    "action": "hold",
+    "trigger_latency": 0.51,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.671019",
+    "action": "hold",
+    "trigger_latency": 0.53,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.671715",
+    "action": "hold",
+    "trigger_latency": 0.53,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.672408",
+    "action": "hold",
+    "trigger_latency": 0.55,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.675763",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.680097",
+    "action": "hold",
+    "trigger_latency": 0.54,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.681385",
+    "action": "hold",
+    "trigger_latency": 0.54,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.682308",
+    "action": "hold",
+    "trigger_latency": 0.53,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.683110",
+    "action": "hold",
+    "trigger_latency": 0.52,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.683854",
+    "action": "hold",
+    "trigger_latency": 0.52,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.684538",
+    "action": "hold",
+    "trigger_latency": 0.52,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.688614",
+    "action": "hold",
+    "trigger_latency": 0.54,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.689425",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.693955",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.695757",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.696966",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.697690",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.698438",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.699141",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.699859",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.700576",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.707003",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.708813",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.709841",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.710996",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.711756",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.712491",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.713212",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.713920",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.714592",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.715307",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.716013",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.716694",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.717376",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.718085",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.718774",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.719469",
+    "action": "elevate",
+    "trigger_latency": 2.35,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": 82,
+    "applied_arp": 1
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.808329",
+    "action": "hold",
+    "trigger_latency": 1.79,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.813411",
+    "action": "relax",
+    "trigger_latency": 0.7,
+    "state": "NORMAL",
+    "applied_5qi": 85,
+    "applied_arp": 5
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.879167",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.880390",
+    "action": "hold",
+    "trigger_latency": 1.37,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.881204",
+    "action": "hold",
+    "trigger_latency": 1.86,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.881953",
+    "action": "hold",
+    "trigger_latency": 1.33,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.882704",
+    "action": "hold",
+    "trigger_latency": 1.13,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.883423",
+    "action": "hold",
+    "trigger_latency": 1.08,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.884101",
+    "action": "hold",
+    "trigger_latency": 0.94,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.889979",
+    "action": "hold",
+    "trigger_latency": 0.88,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.892002",
+    "action": "hold",
+    "trigger_latency": 0.87,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.892755",
+    "action": "hold",
+    "trigger_latency": 0.83,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.893477",
+    "action": "hold",
+    "trigger_latency": 0.77,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.896152",
+    "action": "hold",
+    "trigger_latency": 0.79,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.897168",
+    "action": "hold",
+    "trigger_latency": 0.8,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.899097",
+    "action": "hold",
+    "trigger_latency": 0.78,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.899889",
+    "action": "hold",
+    "trigger_latency": 0.77,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.900637",
+    "action": "hold",
+    "trigger_latency": 0.78,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.908448",
+    "action": "hold",
+    "trigger_latency": 0.77,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.909311",
+    "action": "hold",
+    "trigger_latency": 0.78,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.910041",
+    "action": "hold",
+    "trigger_latency": 0.76,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.914571",
+    "action": "hold",
+    "trigger_latency": 0.77,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.916212",
+    "action": "hold",
+    "trigger_latency": 0.77,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.917216",
+    "action": "hold",
+    "trigger_latency": 0.77,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.917997",
+    "action": "hold",
+    "trigger_latency": 0.79,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.924754",
+    "action": "hold",
+    "trigger_latency": 0.77,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.925543",
+    "action": "hold",
+    "trigger_latency": 0.76,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.926289",
+    "action": "hold",
+    "trigger_latency": 0.76,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.927034",
+    "action": "hold",
+    "trigger_latency": 0.74,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.931475",
+    "action": "hold",
+    "trigger_latency": 0.74,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.933000",
+    "action": "hold",
+    "trigger_latency": 0.76,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.933987",
+    "action": "hold",
+    "trigger_latency": 0.81,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.944783",
+    "action": "hold",
+    "trigger_latency": 0.8,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.947013",
+    "action": "hold",
+    "trigger_latency": 0.78,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.948081",
+    "action": "hold",
+    "trigger_latency": 0.74,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.948851",
+    "action": "hold",
+    "trigger_latency": 0.68,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.949586",
+    "action": "hold",
+    "trigger_latency": 0.67,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.950293",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.950998",
+    "action": "hold",
+    "trigger_latency": 0.69,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.957114",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.957846",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.961751",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.963671",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.964771",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.965561",
+    "action": "hold",
+    "trigger_latency": 0.67,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.966269",
+    "action": "hold",
+    "trigger_latency": 0.69,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.966998",
+    "action": "hold",
+    "trigger_latency": 0.69,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.973115",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.973895",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.974868",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.978675",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.980492",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.981785",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.982595",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.983333",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.984061",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.990087",
+    "action": "hold",
+    "trigger_latency": 0.68,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.990881",
+    "action": "hold",
+    "trigger_latency": 0.77,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.991743",
+    "action": "hold",
+    "trigger_latency": 0.89,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.993665",
+    "action": "hold",
+    "trigger_latency": 0.84,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:11.994550",
+    "action": "elevate",
+    "trigger_latency": 2.22,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": 82,
+    "applied_arp": 1
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.060090",
+    "action": "hold",
+    "trigger_latency": 2.52,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.061182",
+    "action": "hold",
+    "trigger_latency": 1.82,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.062187",
+    "action": "hold",
+    "trigger_latency": 1.89,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.066618",
+    "action": "hold",
+    "trigger_latency": 1.43,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.067936",
+    "action": "hold",
+    "trigger_latency": 1.01,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.068784",
+    "action": "relax",
+    "trigger_latency": 0.87,
+    "state": "NORMAL",
+    "applied_5qi": 85,
+    "applied_arp": 5
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.175386",
+    "action": "hold",
+    "trigger_latency": 1.86,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.177547",
+    "action": "hold",
+    "trigger_latency": 1.44,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.178560",
+    "action": "hold",
+    "trigger_latency": 0.77,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.179610",
+    "action": "hold",
+    "trigger_latency": 0.73,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.180475",
+    "action": "hold",
+    "trigger_latency": 0.74,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.181335",
+    "action": "hold",
+    "trigger_latency": 0.7,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.182194",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.183033",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.183880",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.188896",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.189852",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.190723",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.191555",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.192380",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.193178",
+    "action": "hold",
+    "trigger_latency": 0.67,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.194001",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.194833",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.195625",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.196431",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.197242",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.198032",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.198832",
+    "action": "hold",
+    "trigger_latency": 0.67,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.199623",
+    "action": "hold",
+    "trigger_latency": 0.68,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.200463",
+    "action": "hold",
+    "trigger_latency": 0.67,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.201266",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.202029",
+    "action": "hold",
+    "trigger_latency": 0.67,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.202840",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.204196",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.205065",
+    "action": "hold",
+    "trigger_latency": 0.67,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.205923",
+    "action": "hold",
+    "trigger_latency": 0.67,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.206773",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.207609",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.208477",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.209281",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.210119",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.210990",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.211825",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.212756",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.213625",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.214458",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.215253",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.216094",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.216941",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.217781",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.218643",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.219516",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.220335",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.221182",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.222006",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.222838",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.223671",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.224603",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.225452",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.226268",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.227081",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.227914",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.228792",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.229656",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.230496",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.231328",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.232135",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.232933",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.233779",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.234606",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.235421",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.236255",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.237063",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.237875",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.238711",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.239531",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.240340",
+    "action": "hold",
+    "trigger_latency": 0.64,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.241169",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.241951",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.242761",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.243593",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.244690",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.245581",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.246468",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.247278",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.250804",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.259608",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.261590",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.263178",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.264048",
+    "action": "hold",
+    "trigger_latency": 0.65,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.264922",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.265782",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.266656",
+    "action": "hold",
+    "trigger_latency": 0.68,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.267486",
+    "action": "hold",
+    "trigger_latency": 0.67,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.268311",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.269122",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.269956",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.270798",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.271597",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.272450",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.273271",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.274071",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.274909",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.275729",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.276526",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.277309",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.278094",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.278908",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.279709",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.280498",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.294216",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.296253",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.297958",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.298857",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.299948",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.300848",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.301735",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.302616",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.303480",
+    "action": "hold",
+    "trigger_latency": 0.63,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.304600",
+    "action": "hold",
+    "trigger_latency": 0.62,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.305454",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.306281",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.308112",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.308953",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.309799",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.310695",
+    "action": "hold",
+    "trigger_latency": 0.55,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.311544",
+    "action": "hold",
+    "trigger_latency": 0.53,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.312351",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.313203",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.314025",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.314874",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.315730",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.316566",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.317405",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.322071",
+    "action": "hold",
+    "trigger_latency": 0.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.326033",
+    "action": "hold",
+    "trigger_latency": 0.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.327701",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.328689",
+    "action": "hold",
+    "trigger_latency": 0.58,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.329636",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.330669",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.331431",
+    "action": "hold",
+    "trigger_latency": 0.53,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.332134",
+    "action": "hold",
+    "trigger_latency": 0.53,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.332935",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.333723",
+    "action": "hold",
+    "trigger_latency": 0.56,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.334500",
+    "action": "hold",
+    "trigger_latency": 0.53,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.342695",
+    "action": "hold",
+    "trigger_latency": 0.55,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.344204",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.345150",
+    "action": "hold",
+    "trigger_latency": 0.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.345946",
+    "action": "hold",
+    "trigger_latency": 0.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.346698",
+    "action": "hold",
+    "trigger_latency": 0.57,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.347470",
+    "action": "hold",
+    "trigger_latency": 0.54,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.348189",
+    "action": "hold",
+    "trigger_latency": 0.52,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "timestamp": "2026-04-05T01:32:12.348887",
+    "action": "hold",
+    "trigger_latency": 0.49,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  }
+]
