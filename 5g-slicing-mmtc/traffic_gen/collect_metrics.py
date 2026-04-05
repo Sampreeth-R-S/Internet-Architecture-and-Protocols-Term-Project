@@ -1,5 +1,4 @@
-"""
-Collects per-slice traffic metrics at fixed intervals from the ogstun interface.
+"""Collects per-slice traffic metrics at fixed intervals from uesimtun10.
 Adapted for mMTC slice — tracks packet rate, device count, and small-packet throughput.
 
 Usage:
@@ -13,6 +12,7 @@ import argparse
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
 OUTPUT_FILE = os.path.join(DATA_DIR, 'mmtc_traffic_timeseries.csv')
+MONITORED_IFACE = 'uesimtun10'
 
 
 def read_interface_stats():
@@ -35,24 +35,9 @@ def read_interface_stats():
 
 
 def discover_monitor_interfaces(interface_arg):
-    """Resolve which interfaces to monitor."""
-    all_stats = read_interface_stats()
-    all_ifaces = list(all_stats.keys())
-    ue_ifaces = sorted([i for i in all_ifaces if i.startswith('uesimtun')])
-
-    if interface_arg == 'auto':
-        candidates = []
-        if 'ogstun' in all_ifaces:
-            candidates.append('ogstun')
-        if 'lo' in all_ifaces:
-            candidates.append('lo')
-        candidates.extend(ue_ifaces)
-        return candidates if candidates else ['lo']
-
-    if ',' in interface_arg:
-        return [i.strip() for i in interface_arg.split(',') if i.strip()]
-
-    return [interface_arg]
+    """Always monitor uesimtun10 only (ignores interface_arg parameter)."""
+    _ = interface_arg
+    return [MONITORED_IFACE]
 
 
 def select_active_interface(current_stats, previous_stats, candidates):
@@ -88,7 +73,7 @@ def main():
     parser = argparse.ArgumentParser(description='Collect mMTC slice traffic metrics')
     parser.add_argument('--interval', type=int, default=1, help='Collection interval in seconds')
     parser.add_argument('--interface', type=str, default='auto',
-                        help='Network interface to monitor (single, comma-list, or auto)')
+                        help='Ignored: throughput is always aggregated from uesimtun10')
     parser.add_argument('--output', type=str, default=OUTPUT_FILE, help='Output CSV file')
     args = parser.parse_args()
 
@@ -96,7 +81,7 @@ def main():
 
     monitor_ifaces = discover_monitor_interfaces(args.interface)
 
-    print(f"=== Collecting mMTC metrics from '{args.interface}' every {args.interval}s ===")
+    print(f"=== Collecting mMTC metrics from {MONITORED_IFACE} every {args.interval}s ===")
     print(f"Resolved monitor interfaces: {', '.join(monitor_ifaces)}")
     print(f"Output: {args.output}")
     print("Press Ctrl+C to stop.\n")
@@ -115,12 +100,11 @@ def main():
                 curr_stats = read_interface_stats()
                 active_devices = get_active_ues()
 
-                iface = select_active_interface(curr_stats, prev_stats, monitor_ifaces)
-                if iface and iface in curr_stats:
+                iface = MONITORED_IFACE
+                if iface in curr_stats:
                     rx, tx, rxp, txp = curr_stats[iface]
                     prx, ptx, prxp, ptxp = prev_stats.get(iface, (rx, tx, rxp, txp))
                 else:
-                    iface = 'none'
                     rx, tx, rxp, txp = 0, 0, 0, 0
                     prx, ptx, prxp, ptxp = 0, 0, 0, 0
 

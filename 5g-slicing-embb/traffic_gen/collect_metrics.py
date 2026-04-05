@@ -13,6 +13,7 @@ import argparse
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
 OUTPUT_FILE = os.path.join(DATA_DIR, 'embb_traffic_timeseries.csv')
+MONITORED_UE_IFACES = [f'uesimtun{i}' for i in range(5)]
 
 
 def read_interface_stats():
@@ -35,25 +36,9 @@ def read_interface_stats():
 
 
 def discover_monitor_interfaces(interface_arg):
-    """Resolve which interfaces to monitor."""
-    all_stats = read_interface_stats()
-    all_ifaces = list(all_stats.keys())
-    ue_ifaces = sorted([i for i in all_ifaces if i.startswith('uesimtun')])
-
-    if interface_arg == 'auto':
-        candidates = []
-        if 'ogstun' in all_ifaces:
-            candidates.append('ogstun')
-        # In local iperf tests traffic may be routed through loopback.
-        if 'lo' in all_ifaces:
-            candidates.append('lo')
-        candidates.extend(ue_ifaces)
-        return candidates if candidates else ['lo']
-
-    if ',' in interface_arg:
-        return [i.strip() for i in interface_arg.split(',') if i.strip()]
-
-    return [interface_arg]
+    """Resolve monitored interfaces and restrict aggregation to uesimtun0..uesimtun4."""
+    _ = interface_arg
+    return MONITORED_UE_IFACES
 
 
 def aggregate_interface_deltas(current_stats, previous_stats, candidates):
@@ -93,7 +78,8 @@ def get_active_ues():
 def main():
     parser = argparse.ArgumentParser(description='Collect per-slice traffic metrics')
     parser.add_argument('--interval', type=int, default=1, help='Collection interval in seconds')
-    parser.add_argument('--interface', type=str, default='auto', help='Network interface to monitor (single, comma-list, or auto)')
+    parser.add_argument('--interface', type=str, default='auto',
+                        help='Ignored: throughput is always aggregated from uesimtun0..uesimtun4')
     parser.add_argument('--output', type=str, default=OUTPUT_FILE, help='Output CSV file')
     args = parser.parse_args()
 
@@ -101,7 +87,7 @@ def main():
 
     monitor_ifaces = discover_monitor_interfaces(args.interface)
 
-    print(f"=== Collecting metrics from '{args.interface}' every {args.interval}s ===")
+    print(f"=== Collecting metrics from uesimtun0..uesimtun4 every {args.interval}s ===")
     print(f"Resolved monitor interfaces: {', '.join(monitor_ifaces)}")
     print(f"Output: {args.output}")
     print("Press Ctrl+C to stop.\n")

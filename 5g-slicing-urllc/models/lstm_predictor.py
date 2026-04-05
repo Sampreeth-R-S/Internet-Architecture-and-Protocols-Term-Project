@@ -36,6 +36,7 @@ TEST_RATIO    = 0.2
 VAL_RATIO     = 0.1
 PATIENCE      = 15
 SMOOTH_WINDOW = 3       # Rolling-mean applied to target before training
+DATA_FRACTION = 0.5     # Use first 50% of rows to train/validate/test
 SEED          = 42
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -121,9 +122,23 @@ def train_and_evaluate():
     if 'seq' in df.columns:
         df = df.sort_values('seq').reset_index(drop=True)
 
-    latency = df['latency_ms'].values.astype(np.float32)
+    latency_all = df['latency_ms'].values.astype(np.float32)
 
-    print(f"Total samples    : {len(latency)}")
+    if not (0.0 < DATA_FRACTION <= 1.0):
+        raise ValueError(f"DATA_FRACTION must be in (0, 1], got {DATA_FRACTION}")
+
+    n_keep = max(1, int(len(latency_all) * DATA_FRACTION))
+    latency = latency_all[:n_keep]
+
+    min_required = WINDOW_SIZE + HORIZON
+    if len(latency) < min_required:
+        raise ValueError(
+            f"Not enough samples after applying DATA_FRACTION={DATA_FRACTION}. "
+            f"Need at least {min_required}, got {len(latency)}."
+        )
+
+    print(f"Total samples    : {len(latency_all)}")
+    print(f"Using samples    : {len(latency)} ({DATA_FRACTION:.2f} fraction)")
     print(f"Latency range    : {latency.min():.2f} – {latency.max():.2f} ms")
     print(f"Latency mean     : {latency.mean():.2f} ms")
     print(f"Window / Horizon : {WINDOW_SIZE} / {HORIZON}")

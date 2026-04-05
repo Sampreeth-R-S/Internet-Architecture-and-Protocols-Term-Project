@@ -12,9 +12,8 @@ Sensor types:
 Usage:
     python3 mmtc_sensor_traffic.py                        # Default 1000 sensors
     python3 mmtc_sensor_traffic.py --sensors 5000         # 5000 sensors
-    python3 mmtc_sensor_traffic.py --target 10.45.0.1     # Remote target
     python3 mmtc_sensor_traffic.py --duration 600         # 10 minutes
-    python3 mmtc_sensor_traffic.py --live                 # Send real UDP packets
+    python3 mmtc_sensor_traffic.py --live                 # Send real UDP packets (binds to uesimtun10)
 """
 import socket
 import struct
@@ -23,6 +22,7 @@ import random
 import csv
 import os
 import argparse
+import subprocess
 from collections import defaultdict
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -125,15 +125,26 @@ def transmit_with_impairments(sock, payload, target_ip, target_port, live, loss_
     return False, retries_used, 'send_error'
 
 
-def bind_socket_to_interface(sock, interface_name):
-    """Bind a UDP socket to a specific Linux network interface."""
-    if not interface_name:
-        return
+def get_interface_ip(iface_name):
+    """Return IPv4 address for the given interface."""
+    try:
+        result = subprocess.run(
+            ["ip", "-4", "-o", "addr", "show", "dev", iface_name],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+    except Exception as e:
+        raise RuntimeError(f"Failed to query IP for {iface_name}: {e}")
 
-    if not hasattr(socket, 'SO_BINDTODEVICE'):
-        raise RuntimeError('SO_BINDTODEVICE is not available on this platform')
+    for line in result.stdout.strip().splitlines():
+        parts = line.split()
+        if "inet" in parts:
+            inet_idx = parts.index("inet")
+            if inet_idx + 1 < len(parts):
+                return parts[inet_idx + 1].split("/")[0]
 
-    sock.setsockopt(socket.SOL_SOCKET, socket.SO_BINDTODEVICE, interface_name.encode() + b'\0')
+    raise RuntimeError(f"No IPv4 address found on {iface_name}")
 
 
 def simulate_traffic(args):
@@ -147,7 +158,11 @@ def simulate_traffic(args):
     target_ip = args.target
     target_port = args.port
     live = args.live
-    interface_name = args.interface
+    
+    # Resolve uesimtun10 IP for source binding
+    source_ip = None
+    if live:
+        source_ip = get_interface_ip('uesimtun10')
 
     if args.seed is not None:
         random.seed(args.seed)
@@ -197,18 +212,11 @@ def simulate_traffic(args):
     if live:
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         try:
-            bind_socket_to_interface(sock, interface_name)
-            if interface_name:
-                print(f"  Bound live socket to interface: {interface_name}")
-                print()
-        except PermissionError:
-            raise SystemExit(f"Failed to bind to interface '{interface_name}': root privileges required for SO_BINDTODEVICE")
+            sock.bind((source_ip, 0))
+            print(f"  Bound live socket to source IP: {source_ip} (uesimtun10)")
+            print()
         except OSError as exc:
-            raise SystemExit(f"Failed to bind to interface '{interface_name}': {exc}")
-
-    if live and target_ip.startswith('10.45.'):
-        print("  Note: 10.45.x.x target typically uses UE tunnel; ensure uesimtun0 is up.")
-        print()
+            raise SystemExit(f"Failed to bind to source IP {source_ip}: {exc}")
 
     # Per-second aggregation for time-series
     timeseries_rows = []
@@ -410,14 +418,12 @@ def main():
                         help='Total number of simulated IoT sensors (default: 1000)')
     parser.add_argument('--duration', type=int, default=300,
                         help='Simulation duration in seconds (default: 300)')
-    parser.add_argument('--target', type=str, default='127.0.0.1',
-                        help='Target IP for UDP packets (default: 127.0.0.1)')
-    parser.add_argument('--port', type=int, default=9999,
-                        help='Target UDP port (default: 9999)')
+    parser.add_argument('--target', type=str, default='10.46.0.10',
+                        help='Target IP for UDP packets (default: 10.46.0.10)')
+    parser.add_argument('--port', type=int, default=9998,
+                        help='Target UDP port (default: 9998)')
     parser.add_argument('--live', action='store_true',
-                        help='Send real UDP packets (default: simulation only)')
-    parser.add_argument('--interface', type=str, default='uesimtun0',
-                        help='Linux network interface to bind live UDP traffic to (default: uesimtun0)')
+                        help='Send real UDP packets from uesimtun10 (default: simulation only)')
     parser.add_argument('--loss-rate', type=float, default=0.0,
                         help='Packet loss probability in [0,1] applied before each send attempt (default: 0.0)')
     parser.add_argument('--max-retries', type=int, default=0,
