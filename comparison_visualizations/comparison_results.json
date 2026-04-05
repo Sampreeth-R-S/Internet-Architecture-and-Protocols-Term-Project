@@ -1,0 +1,107 @@
+{
+  "embb": {
+    "static": {
+      "throughput_mean": 208.2827239370079,
+      "throughput_max": 500.0,
+      "allocated_bw": 500,
+      "utilization_pct": 41.65654478740158,
+      "unmet_demand_pct": 2.4372364840746523,
+      "waste_pct": 58.343455212598414,
+      "sla_violation_pct": 9.291338582677165
+    },
+    "reactive": {
+      "throughput_mean": 207.9213612598425,
+      "utilization_pct": 39.00698550570495,
+      "unmet_demand_pct": 2.6065042022480887,
+      "waste_pct": 60.99301449429506,
+      "sla_violation_pct": 4.566929133858268
+    },
+    "lstm": {
+      "throughput_mean": 213.48587968503935,
+      "utilization_pct": 43.93487134449265,
+      "unmet_demand_pct": 25.826349218149915,
+      "waste_pct": 56.065128655507344,
+      "sla_violation_pct": 31.968503937007874
+    }
+  },
+  "mmtc": {
+    "static": {
+      "packet_rate_mean": 487.07667210440457,
+      "packet_rate_max": 500.0,
+      "allocated_capacity": 500,
+      "unmet_demand_pct": 99.29009288960664,
+      "sla_violation_pct": 94.94290375203916
+    },
+    "reactive": {
+      "packet_rate_mean": 1401.3246329526917,
+      "unmet_demand_pct": 97.95758988702039,
+      "sla_violation_pct": 28.05872756933116,
+      "waste_pct": 27.206937869997983
+    },
+    "lstm": {
+      "packet_rate_mean": 1314.6965742251223,
+      "unmet_demand_pct": 98.08384901288774,
+      "sla_violation_pct": 32.78955954323002,
+      "waste_pct": 19.19083444383279
+    }
+  },
+  "urllc": {
+    "static": {
+      "latency_mean": 4.677214304153477,
+      "latency_median": 1.4,
+      "latency_std": 8.72153878365159,
+      "latency_max": 210.31,
+      "latency_min": 0.07,
+      "latency_p99": 42.01,
+      "latency_p95": 19.32,
+      "latency_p50": 1.4,
+      "sla_violation_1.0ms_pct": 61.28721077159278,
+      "sla_violation_2.0ms_pct": 40.538851374301984,
+      "sla_violation_5.0ms_pct": 24.378744854010137,
+      "sla_violation_10.0ms_pct": 13.72807434681594,
+      "total_lost": "15",
+      "total_recv": "14727",
+      "packet_loss_pct": 0.10175010175010174,
+      "num_ues": 5,
+      "num_samples": 73601
+    },
+    "reactive": {
+      "latency_mean": 6.410397357168547,
+      "latency_median": 1.21,
+      "latency_std": 71.92253594936057,
+      "latency_max": 2462.97,
+      "latency_min": 0.08,
+      "latency_p99": 25.666000000000057,
+      "latency_p95": 8.975000000000001,
+      "latency_p50": 1.21,
+      "sla_violation_1.0ms_pct": 60.167041867032545,
+      "sla_violation_2.0ms_pct": 26.66941961609676,
+      "sla_violation_5.0ms_pct": 8.988823913362017,
+      "sla_violation_10.0ms_pct": 4.311918050911803,
+      "total_lost": "17",
+      "total_recv": "16992",
+      "packet_loss_pct": 0.09994708683638075,
+      "num_ues": 5,
+      "num_samples": 75071
+    },
+    "lstm": {
+      "latency_mean": 4.677214304153477,
+      "latency_median": 1.4,
+      "latency_std": 8.72153878365159,
+      "latency_max": 210.31,
+      "latency_min": 0.07,
+      "latency_p99": 42.01,
+      "latency_p95": 19.32,
+      "latency_p50": 1.4,
+      "sla_violation_1.0ms_pct": 61.28721077159278,
+      "sla_violation_2.0ms_pct": 40.538851374301984,
+      "sla_violation_5.0ms_pct": 24.378744854010137,
+      "sla_violation_10.0ms_pct": 13.72807434681594,
+      "total_lost": "15",
+      "total_recv": "14727",
+      "packet_loss_pct": 0.10175010175010174,
+      "num_ues": 5,
+      "num_samples": 73601
+    }
+  }
+}

@@ -1,0 +1,72 @@
+======================================================================
+  Cross-Controller Performance Comparison
+  Static  ·  Reactive  ·  LSTM (Proactive)
+======================================================================
+
+▸ Loading data …
+    [embb/lstm] stats: 635 rows
+    [embb/reactive] stats: 672 rows
+    [mmtc/lstm] stats: 613 rows
+    [mmtc/reactive] stats: 643 rows
+    [urllc/lstm] stats: 73601 rows
+    [urllc/reactive] stats: 75071 rows
+    [embb/reactive] decisions: 672 entries
+    [embb/lstm] decisions: 201 entries
+    [mmtc/reactive] decisions: 643 entries
+    [mmtc/lstm] decisions: 99 entries
+    [urllc/reactive] decisions: 751 entries
+    [urllc/lstm] decisions: 197 entries
+
+▸ Computing metrics …
+    [urllc/lstm] mean latency = 4.68 ms
+
+▸ Generating visualisations → /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/embb_throughput_timeseries.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/embb_allocation_vs_demand.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/embb_bar_summary.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/mmtc_packet_rate_timeseries.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/mmtc_capacity_timeline.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/mmtc_bar_summary.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/urllc_latency_cdf.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/urllc_latency_boxplot.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/urllc_sla_violations.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/urllc_per_ue_latency.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/urllc_per_ue_latency.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/decision_distribution.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/embb_decision_bw_timeline.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/mmtc_decision_capacity_timeline.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/urllc_decision_latency_timeline.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/cross_slice_radar.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/summary_table.png
+  ✓ Saved /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/decision_volume_breakdown.png
+
+======================================================================
+  CONSOLE SUMMARY
+======================================================================
+
+  ── eMBB ──────────────────────────────────────────────
+    Static Allocation          Avg Tput=208.3 Mbps | Util=41.7% | SLA Viol=9.3% | Waste=58.3% | Unmet=2.4%
+    Reactive Controller        Avg Tput=207.9 Mbps | Util=39.0% | SLA Viol=4.6% | Waste=61.0% | Unmet=2.6%
+    LSTM (Proactive)           Avg Tput=213.5 Mbps | Util=43.9% | SLA Viol=32.0% | Waste=56.1% | Unmet=25.8%
+
+  ── mMTC ──────────────────────────────────────────────
+    Static Allocation          Avg PktRate=487.1 pps | SLA Viol=94.9% | Unmet=99.3%
+    Reactive Controller        Avg PktRate=1401.3 pps | SLA Viol=28.1% | Waste=27.2% | Unmet=98.0%
+    LSTM (Proactive)           Avg PktRate=1314.7 pps | SLA Viol=32.8% | Waste=19.2% | Unmet=98.1%
+
+  ── URLLC ─────────────────────────────────────────────
+    Static Allocation          Avg Lat=4.68 ms | >2ms=40.5%
+    Reactive Controller        Avg Lat=6.41 ms | >2ms=26.7%
+    LSTM (Proactive)           Avg Lat=4.68 ms | >2ms=40.5%
+
+  ── Decision Counts ────────────────────────────────────────
+    [EMBB/Reactive Controller] total=672 | contract=125, expand=121, hold=426, dur=14s
+    [EMBB/LSTM (Proactive)] total=201 | contract=25, expand=21, hold=155, dur=602s
+    [MMTC/Reactive Controller] total=643 | contract=17, expand=22, hold=604, dur=2s
+    [MMTC/LSTM (Proactive)] total=99 | contract=47, expand=52, dur=567s
+    [URLLC/Reactive Controller] total=751 | elevate=12, hold=728, relax=11, dur=3s
+    [URLLC/LSTM (Proactive)] total=197 | elevate=8, hold=181, relax=8, dur=605s
+
+  ✓ Numeric results saved → /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/comparison_results.json
+  ✓ All visualisations saved → /home/sam/Desktop/Internet-Architecture-and-Protocols-Term-Project/comparison_visualizations/
+======================================================================

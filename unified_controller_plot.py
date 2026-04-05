@@ -42,6 +42,7 @@ import re
 import csv
 import json
 import time
+import signal
 import argparse
 import multiprocessing
 from datetime import datetime
@@ -193,8 +194,8 @@ class Open5GSAuthMixin:
 # URLLC Controller  (SST=2)
 # ═════════════════════════════════════════════════════════════════════════════
 URLLC_SST_TARGET             = 2
-URLLC_HIGH_LATENCY_THRESHOLD = 2.0   # ms
-URLLC_LOW_LATENCY_THRESHOLD  = 1.0   # ms
+URLLC_HIGH_LATENCY_THRESHOLD = 5.0   # ms
+URLLC_LOW_LATENCY_THRESHOLD  = 4.0   # ms
 
 URLLC_QOS_NORMAL = {
     "5qi":          85,
@@ -258,10 +259,10 @@ class URLLCController(Open5GSAuthMixin):
     # ── Scalers ────────────────────────────────────────────────────────────
 
     def _scale_features(self, arr: np.ndarray) -> np.ndarray:
-        return (arr - self.feat_scaler_min) * self.feat_scaler_scale
+        return arr * self.feat_scaler_scale + self.feat_scaler_min
 
     def _inverse_scale_target(self, arr: np.ndarray) -> np.ndarray:
-        return arr / self.tgt_scaler_scale[0] + self.tgt_scaler_min[0]
+        return (arr - self.tgt_scaler_min[0]) / self.tgt_scaler_scale[0]
 
     # ── Prediction ─────────────────────────────────────────────────────────
 
@@ -279,12 +280,14 @@ class URLLCController(Open5GSAuthMixin):
         if len(predicted_latencies) == 0:
             return 'hold', 0.0
         mean_latency = float(np.mean(predicted_latencies))
-        if (mean_latency > URLLC_HIGH_LATENCY_THRESHOLD
-                and self.current_state != URLLC_QOS_ELEVATED['state_name']):
-            return 'elevate', mean_latency
-        if (mean_latency < URLLC_LOW_LATENCY_THRESHOLD
-                and self.current_state != URLLC_QOS_NORMAL['state_name']):
-            return 'relax', mean_latency
+        if mean_latency > URLLC_HIGH_LATENCY_THRESHOLD:
+            if self.current_state != URLLC_QOS_ELEVATED['state_name']:
+                return 'elevate', mean_latency
+            return 'hold_max', mean_latency
+        if mean_latency < URLLC_LOW_LATENCY_THRESHOLD:
+            if self.current_state != URLLC_QOS_NORMAL['state_name']:
+                return 'relax', mean_latency
+            return 'hold_min', mean_latency
         return 'hold', mean_latency
 
     # ── QoS application ────────────────────────────────────────────────────
@@ -308,6 +311,36 @@ class URLLCController(Open5GSAuthMixin):
                 f"    ↳ RELAXING QoS → 5QI: {target_qos['5qi']}, "
                 f"ARP: {target_qos['arp_priority']}"
             )
+        elif action == 'hold_max':
+            print(
+                f"[URLLC][{timestamp}] ⏸️  HOLD: Latency {trigger_value:.2f} ms > HIGH "
+                f"({URLLC_HIGH_LATENCY_THRESHOLD} ms) — already at max QoS ({self.current_state})"
+            )
+            self.decisions.append({
+                'slice':           'URLLC',
+                'timestamp':       timestamp,
+                'action':          'hold',
+                'trigger_latency': round(trigger_value, 2),
+                'state':           self.current_state,
+                'applied_5qi':     None,
+                'applied_arp':     None,
+            })
+            return
+        elif action == 'hold_min':
+            print(
+                f"[URLLC][{timestamp}] ⏸️  HOLD: Latency {trigger_value:.2f} ms < LOW "
+                f"({URLLC_LOW_LATENCY_THRESHOLD} ms) — already at min QoS ({self.current_state})"
+            )
+            self.decisions.append({
+                'slice':           'URLLC',
+                'timestamp':       timestamp,
+                'action':          'hold',
+                'trigger_latency': round(trigger_value, 2),
+                'state':           self.current_state,
+                'applied_5qi':     None,
+                'applied_arp':     None,
+            })
+            return
         else:
             print(
                 f"[URLLC][{timestamp}] ⏸️  HOLD: Latency {trigger_value:.2f} ms within band "
@@ -449,8 +482,8 @@ MMTC_MAX_BW_DL            = 50
 MMTC_MAX_BW_UL            = 25
 MMTC_EXPAND_RATIO         = 0.30
 MMTC_CONTRACT_RATIO       = 0.20
-MMTC_HIGH_THRESHOLD_RATIO = 0.10
-MMTC_LOW_THRESHOLD_RATIO  = 0.01
+MMTC_HIGH_THRESHOLD_RATIO = 0.8
+MMTC_LOW_THRESHOLD_RATIO  = 0.4
 
 
 class MMTCController(Open5GSAuthMixin):
@@ -498,10 +531,10 @@ class MMTCController(Open5GSAuthMixin):
     # ── Scalers ────────────────────────────────────────────────────────────
 
     def _scale(self, v: float) -> float:
-        return (v - self.scaler_min[0]) * self.scaler_scale[0]
+        return v * self.scaler_scale[0] + self.scaler_min[0]
 
     def _inverse_scale(self, v: float) -> float:
-        return v / self.scaler_scale[0] + self.scaler_min[0]
+        return (v - self.scaler_min[0]) / self.scaler_scale[0]
 
     # ── Prediction ─────────────────────────────────────────────────────────
 
@@ -697,8 +730,8 @@ EMBB_MAX_BW_DL            = 2500
 EMBB_MAX_BW_UL            = 1250
 EMBB_EXPAND_RATIO         = 0.25
 EMBB_CONTRACT_RATIO       = 0.20
-EMBB_HIGH_THRESHOLD_RATIO = 0.10
-EMBB_LOW_THRESHOLD_RATIO  = 0.01
+EMBB_HIGH_THRESHOLD_RATIO = 0.8
+EMBB_LOW_THRESHOLD_RATIO  = 0.4
 
 
 class EMBBController(Open5GSAuthMixin):
@@ -745,10 +778,10 @@ class EMBBController(Open5GSAuthMixin):
     # ── Scalers ────────────────────────────────────────────────────────────
 
     def _scale(self, v: float) -> float:
-        return (v - self.scaler_min[0]) * self.scaler_scale[0]
+        return v * self.scaler_scale[0] + self.scaler_min[0]
 
     def _inverse_scale(self, v: float) -> float:
-        return v / self.scaler_scale[0] + self.scaler_min[0]
+        return (v - self.scaler_min[0]) / self.scaler_scale[0]
 
     # ── Prediction ─────────────────────────────────────────────────────────
 
@@ -1498,12 +1531,22 @@ def main():
             status = "OK" if p.exitcode == 0 else f"EXITED {p.exitcode}"
             print(f"  [{p.name}] {status}")
     except KeyboardInterrupt:
-        print("\n  Stopping all controllers…")
+        print("\n  Ctrl+C received — signalling controllers to save and exit…")
+        # Send SIGINT so each subprocess's KeyboardInterrupt fires,
+        # allowing their finally blocks to save decisions.
         for p in processes:
-            p.terminate()
+            if p.is_alive():
+                os.kill(p.pid, signal.SIGINT)
+        # Wait for each process to finish saving (up to 15s each)
         for p in processes:
-            p.join()
-        print("  All processes terminated.")
+            p.join(timeout=15)
+            if p.is_alive():
+                print(f"  [{p.name}] did not exit in time — forcing termination")
+                p.terminate()
+                p.join()
+            status = "OK" if p.exitcode == 0 else f"EXITED {p.exitcode}"
+            print(f"  [{p.name}] {status}")
+        print("  All processes finished.")
 
     print("\n  Output files:")
     for fname in ['unified_decisions_urllc.json',

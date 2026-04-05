@@ -145,7 +145,7 @@ class URLLCController:
 
         Returns
         -------
-        action : str  — 'elevate', 'relax', or 'hold'
+        action : str  — 'elevate', 'relax', 'hold', 'hold_max', or 'hold_min'
         value  : float — mean predicted latency that triggered the decision
         """
         if len(predicted_latencies) == 0:
@@ -153,11 +153,15 @@ class URLLCController:
 
         mean_latency = float(np.mean(predicted_latencies))
 
-        if mean_latency > HIGH_LATENCY_THRESHOLD and self.current_state != QOS_ELEVATED['state_name']:
-            return 'elevate', mean_latency
+        if mean_latency > HIGH_LATENCY_THRESHOLD:
+            if self.current_state != QOS_ELEVATED['state_name']:
+                return 'elevate', mean_latency
+            return 'hold_max', mean_latency
 
-        if mean_latency < LOW_LATENCY_THRESHOLD and self.current_state != QOS_NORMAL['state_name']:
-            return 'relax', mean_latency
+        if mean_latency < LOW_LATENCY_THRESHOLD:
+            if self.current_state != QOS_NORMAL['state_name']:
+                return 'relax', mean_latency
+            return 'hold_min', mean_latency
 
         return 'hold', mean_latency
 
@@ -184,12 +188,39 @@ class URLLCController:
                 f"    ↳ RELAXING QoS → 5QI: {target_qos['5qi']}, ARP: {target_qos['arp_priority']}"
             )
 
-        else:  # hold
+        elif action == 'hold_max':
+            print(
+                f"[{timestamp}] ⏸️  HOLD: Latency {trigger_value:.2f} ms > HIGH "
+                f"({HIGH_LATENCY_THRESHOLD} ms) — already at max QoS ({self.current_state})"
+            )
+            self.decisions.append({
+                'timestamp':       timestamp,
+                'action':          'hold',
+                'trigger_latency': round(trigger_value, 2),
+                'state':           self.current_state,
+                'applied_5qi':     None,
+                'applied_arp':     None,
+            })
+            return
+        elif action == 'hold_min':
+            print(
+                f"[{timestamp}] ⏸️  HOLD: Latency {trigger_value:.2f} ms < LOW "
+                f"({LOW_LATENCY_THRESHOLD} ms) — already at min QoS ({self.current_state})"
+            )
+            self.decisions.append({
+                'timestamp':       timestamp,
+                'action':          'hold',
+                'trigger_latency': round(trigger_value, 2),
+                'state':           self.current_state,
+                'applied_5qi':     None,
+                'applied_arp':     None,
+            })
+            return
+        else:  # hold — truly within band
             print(
                 f"[{timestamp}] ⏸️  HOLD: Latency {trigger_value:.2f} ms within band "
                 f"({LOW_LATENCY_THRESHOLD} ms – {HIGH_LATENCY_THRESHOLD} ms)"
             )
-            # Still log the hold decision
             self.decisions.append({
                 'timestamp':       timestamp,
                 'action':          'hold',

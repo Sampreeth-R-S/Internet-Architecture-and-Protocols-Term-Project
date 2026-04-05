@@ -1,0 +1,1775 @@
+[
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:10:46.062912",
+    "action": "hold",
+    "trigger_latency": 3.02,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:10:47.885313",
+    "action": "hold",
+    "trigger_latency": 2.92,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:10:50.557208",
+    "action": "hold",
+    "trigger_latency": 3.15,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:10:53.103675",
+    "action": "hold",
+    "trigger_latency": 3.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:10:55.614071",
+    "action": "hold",
+    "trigger_latency": 3.17,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:10:58.263328",
+    "action": "hold",
+    "trigger_latency": 3.07,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:10:59.387474",
+    "action": "hold",
+    "trigger_latency": 3.35,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:00.398276",
+    "action": "hold",
+    "trigger_latency": 3.53,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:01.410073",
+    "action": "hold",
+    "trigger_latency": 3.46,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:02.454494",
+    "action": "hold",
+    "trigger_latency": 3.09,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:03.474135",
+    "action": "hold",
+    "trigger_latency": 3.08,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:04.645668",
+    "action": "elevate",
+    "trigger_latency": 7.28,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": 82,
+    "applied_arp": 1
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:05.712283",
+    "action": "hold",
+    "trigger_latency": 9.15,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:06.760139",
+    "action": "hold",
+    "trigger_latency": 7.86,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:07.933531",
+    "action": "hold",
+    "trigger_latency": 6.87,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:08.945199",
+    "action": "hold",
+    "trigger_latency": 7.65,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:09.955329",
+    "action": "hold",
+    "trigger_latency": 6.02,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:11.232193",
+    "action": "hold",
+    "trigger_latency": 5.78,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:12.691623",
+    "action": "hold",
+    "trigger_latency": 5.0,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:13.830396",
+    "action": "hold",
+    "trigger_latency": 4.42,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:14.912690",
+    "action": "hold",
+    "trigger_latency": 4.17,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:15.928540",
+    "action": "hold",
+    "trigger_latency": 4.11,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:16.981617",
+    "action": "hold",
+    "trigger_latency": 4.17,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:18.002787",
+    "action": "hold",
+    "trigger_latency": 4.09,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:19.027507",
+    "action": "hold",
+    "trigger_latency": 4.78,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:20.044189",
+    "action": "hold",
+    "trigger_latency": 5.78,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:21.115612",
+    "action": "hold",
+    "trigger_latency": 5.55,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:22.180895",
+    "action": "hold",
+    "trigger_latency": 5.07,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:25.858638",
+    "action": "hold",
+    "trigger_latency": 4.92,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:29.285409",
+    "action": "hold",
+    "trigger_latency": 4.45,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:30.443302",
+    "action": "hold",
+    "trigger_latency": 4.3,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:31.455346",
+    "action": "hold",
+    "trigger_latency": 4.4,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:32.689222",
+    "action": "hold",
+    "trigger_latency": 4.55,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:36.620189",
+    "action": "hold",
+    "trigger_latency": 4.6,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:37.793099",
+    "action": "hold",
+    "trigger_latency": 4.64,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:41.544926",
+    "action": "hold",
+    "trigger_latency": 6.93,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:42.665496",
+    "action": "hold",
+    "trigger_latency": 5.46,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:43.692221",
+    "action": "hold",
+    "trigger_latency": 4.48,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:44.705380",
+    "action": "hold",
+    "trigger_latency": 4.7,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:48.414638",
+    "action": "hold",
+    "trigger_latency": 4.19,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:52.676865",
+    "action": "relax",
+    "trigger_latency": 3.81,
+    "state": "NORMAL",
+    "applied_5qi": 85,
+    "applied_arp": 5
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:11:58.292580",
+    "action": "hold",
+    "trigger_latency": 3.7,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:02.652033",
+    "action": "hold",
+    "trigger_latency": 4.06,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:08.223470",
+    "action": "hold",
+    "trigger_latency": 4.11,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:10.364227",
+    "action": "hold",
+    "trigger_latency": 3.8,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:15.786811",
+    "action": "hold",
+    "trigger_latency": 3.79,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:19.980310",
+    "action": "elevate",
+    "trigger_latency": 5.76,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": 82,
+    "applied_arp": 1
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:24.923724",
+    "action": "hold",
+    "trigger_latency": 17.02,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:28.603945",
+    "action": "hold",
+    "trigger_latency": 12.41,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:33.441694",
+    "action": "hold",
+    "trigger_latency": 12.74,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:37.649658",
+    "action": "hold",
+    "trigger_latency": 15.04,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:43.425091",
+    "action": "hold",
+    "trigger_latency": 16.45,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:47.880834",
+    "action": "hold",
+    "trigger_latency": 14.74,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:51.736212",
+    "action": "hold",
+    "trigger_latency": 10.99,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:12:57.272750",
+    "action": "hold",
+    "trigger_latency": 9.78,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:01.584844",
+    "action": "hold",
+    "trigger_latency": 7.65,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:02.719573",
+    "action": "hold",
+    "trigger_latency": 6.39,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:08.119612",
+    "action": "hold",
+    "trigger_latency": 7.09,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:11.801501",
+    "action": "hold",
+    "trigger_latency": 6.86,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:15.658006",
+    "action": "hold",
+    "trigger_latency": 4.96,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:19.972843",
+    "action": "hold",
+    "trigger_latency": 5.18,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:23.848943",
+    "action": "hold",
+    "trigger_latency": 4.75,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:27.825998",
+    "action": "hold",
+    "trigger_latency": 4.71,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:31.523699",
+    "action": "hold",
+    "trigger_latency": 4.79,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:36.127469",
+    "action": "hold",
+    "trigger_latency": 4.71,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:40.189003",
+    "action": "hold",
+    "trigger_latency": 4.38,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:44.252223",
+    "action": "hold",
+    "trigger_latency": 5.66,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:45.308077",
+    "action": "hold",
+    "trigger_latency": 4.98,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:50.065829",
+    "action": "hold",
+    "trigger_latency": 4.75,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:54.012169",
+    "action": "hold",
+    "trigger_latency": 6.4,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:13:57.337114",
+    "action": "hold",
+    "trigger_latency": 4.98,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:00.877611",
+    "action": "relax",
+    "trigger_latency": 3.66,
+    "state": "NORMAL",
+    "applied_5qi": 85,
+    "applied_arp": 5
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:04.312148",
+    "action": "hold",
+    "trigger_latency": 3.69,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:05.372481",
+    "action": "hold",
+    "trigger_latency": 3.69,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:08.868239",
+    "action": "elevate",
+    "trigger_latency": 5.36,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": 82,
+    "applied_arp": 1
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:11.526732",
+    "action": "hold",
+    "trigger_latency": 4.83,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:12.919374",
+    "action": "hold",
+    "trigger_latency": 4.42,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:17.430260",
+    "action": "hold",
+    "trigger_latency": 4.86,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:21.582416",
+    "action": "relax",
+    "trigger_latency": 3.77,
+    "state": "NORMAL",
+    "applied_5qi": 85,
+    "applied_arp": 5
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:22.873294",
+    "action": "hold",
+    "trigger_latency": 3.54,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:23.927886",
+    "action": "hold",
+    "trigger_latency": 3.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:25.380234",
+    "action": "hold",
+    "trigger_latency": 3.5,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:29.387365",
+    "action": "hold",
+    "trigger_latency": 3.88,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:33.602319",
+    "action": "hold",
+    "trigger_latency": 3.77,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:38.034829",
+    "action": "hold",
+    "trigger_latency": 4.11,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:41.886365",
+    "action": "hold",
+    "trigger_latency": 3.75,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:42.953461",
+    "action": "elevate",
+    "trigger_latency": 5.57,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": 82,
+    "applied_arp": 1
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:44.040918",
+    "action": "hold",
+    "trigger_latency": 9.99,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:45.079731",
+    "action": "hold",
+    "trigger_latency": 12.56,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:46.115622",
+    "action": "hold",
+    "trigger_latency": 13.95,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:50.262913",
+    "action": "hold",
+    "trigger_latency": 10.23,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:54.390994",
+    "action": "hold",
+    "trigger_latency": 7.01,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:14:58.254678",
+    "action": "hold",
+    "trigger_latency": 6.37,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:02.423917",
+    "action": "hold",
+    "trigger_latency": 7.56,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:05.264034",
+    "action": "hold",
+    "trigger_latency": 5.39,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:09.150263",
+    "action": "hold",
+    "trigger_latency": 6.07,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:13.232003",
+    "action": "hold",
+    "trigger_latency": 7.47,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:16.385115",
+    "action": "hold",
+    "trigger_latency": 6.42,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:19.883845",
+    "action": "hold",
+    "trigger_latency": 7.15,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:23.330031",
+    "action": "hold",
+    "trigger_latency": 6.14,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:24.829477",
+    "action": "hold",
+    "trigger_latency": 5.76,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:29.001069",
+    "action": "hold",
+    "trigger_latency": 5.32,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:32.486308",
+    "action": "hold",
+    "trigger_latency": 4.85,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:37.072320",
+    "action": "hold",
+    "trigger_latency": 4.48,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:40.536436",
+    "action": "hold",
+    "trigger_latency": 4.65,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:45.086116",
+    "action": "hold",
+    "trigger_latency": 5.17,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:47.973811",
+    "action": "hold",
+    "trigger_latency": 5.91,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:50.942478",
+    "action": "hold",
+    "trigger_latency": 5.16,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:54.542487",
+    "action": "hold",
+    "trigger_latency": 5.6,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:56.351787",
+    "action": "hold",
+    "trigger_latency": 4.69,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:15:57.392125",
+    "action": "hold",
+    "trigger_latency": 4.34,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:01.476348",
+    "action": "hold",
+    "trigger_latency": 4.04,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:05.737563",
+    "action": "hold",
+    "trigger_latency": 4.09,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:09.056286",
+    "action": "hold",
+    "trigger_latency": 4.39,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:12.813121",
+    "action": "hold",
+    "trigger_latency": 4.66,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:13.885072",
+    "action": "hold",
+    "trigger_latency": 4.17,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:17.888148",
+    "action": "hold",
+    "trigger_latency": 4.1,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:20.963361",
+    "action": "hold",
+    "trigger_latency": 4.03,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:24.626400",
+    "action": "hold",
+    "trigger_latency": 4.25,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:28.079237",
+    "action": "hold",
+    "trigger_latency": 4.0,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:31.775339",
+    "action": "relax",
+    "trigger_latency": 3.62,
+    "state": "NORMAL",
+    "applied_5qi": 85,
+    "applied_arp": 5
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:36.278493",
+    "action": "hold",
+    "trigger_latency": 3.69,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:38.362163",
+    "action": "elevate",
+    "trigger_latency": 5.37,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": 82,
+    "applied_arp": 1
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:41.438372",
+    "action": "hold",
+    "trigger_latency": 4.42,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:45.549050",
+    "action": "relax",
+    "trigger_latency": 3.9,
+    "state": "NORMAL",
+    "applied_5qi": 85,
+    "applied_arp": 5
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:49.637663",
+    "action": "hold",
+    "trigger_latency": 4.8,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:50.774222",
+    "action": "hold",
+    "trigger_latency": 4.15,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:52.767111",
+    "action": "hold",
+    "trigger_latency": 4.34,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:16:56.768554",
+    "action": "hold",
+    "trigger_latency": 3.78,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:00.809530",
+    "action": "hold",
+    "trigger_latency": 3.59,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:03.803108",
+    "action": "elevate",
+    "trigger_latency": 5.22,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": 82,
+    "applied_arp": 1
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:07.387242",
+    "action": "hold",
+    "trigger_latency": 4.24,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:11.643980",
+    "action": "hold",
+    "trigger_latency": 8.79,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:12.708136",
+    "action": "hold",
+    "trigger_latency": 7.22,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:17.103949",
+    "action": "hold",
+    "trigger_latency": 5.35,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:20.445104",
+    "action": "hold",
+    "trigger_latency": 5.87,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:21.841062",
+    "action": "hold",
+    "trigger_latency": 5.63,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:27.653622",
+    "action": "hold",
+    "trigger_latency": 5.28,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:32.269245",
+    "action": "hold",
+    "trigger_latency": 6.43,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:35.942980",
+    "action": "hold",
+    "trigger_latency": 5.31,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:40.030384",
+    "action": "hold",
+    "trigger_latency": 4.55,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:42.599875",
+    "action": "hold",
+    "trigger_latency": 5.74,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:46.606573",
+    "action": "hold",
+    "trigger_latency": 5.33,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:50.129203",
+    "action": "hold",
+    "trigger_latency": 4.59,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:51.230404",
+    "action": "hold",
+    "trigger_latency": 4.47,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:54.696271",
+    "action": "hold",
+    "trigger_latency": 4.41,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:17:58.308953",
+    "action": "hold",
+    "trigger_latency": 4.3,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:02.654778",
+    "action": "hold",
+    "trigger_latency": 4.22,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:06.107060",
+    "action": "hold",
+    "trigger_latency": 4.25,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:07.785514",
+    "action": "hold",
+    "trigger_latency": 4.36,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:10.549739",
+    "action": "hold",
+    "trigger_latency": 4.19,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:13.678348",
+    "action": "hold",
+    "trigger_latency": 4.19,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:16.850051",
+    "action": "hold",
+    "trigger_latency": 4.21,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:19.741575",
+    "action": "hold",
+    "trigger_latency": 4.17,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:22.957644",
+    "action": "relax",
+    "trigger_latency": 3.62,
+    "state": "NORMAL",
+    "applied_5qi": 85,
+    "applied_arp": 5
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:24.923092",
+    "action": "hold",
+    "trigger_latency": 3.61,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:28.880004",
+    "action": "hold",
+    "trigger_latency": 3.49,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:32.087963",
+    "action": "hold",
+    "trigger_latency": 3.29,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:36.065786",
+    "action": "hold",
+    "trigger_latency": 3.6,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:40.021379",
+    "action": "hold",
+    "trigger_latency": 3.66,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:43.219636",
+    "action": "hold",
+    "trigger_latency": 3.38,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:46.894265",
+    "action": "hold",
+    "trigger_latency": 3.21,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:50.250156",
+    "action": "hold",
+    "trigger_latency": 3.11,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:53.990587",
+    "action": "hold",
+    "trigger_latency": 3.55,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:18:57.177104",
+    "action": "hold",
+    "trigger_latency": 3.34,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:01.383140",
+    "action": "hold",
+    "trigger_latency": 3.25,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:05.044273",
+    "action": "hold",
+    "trigger_latency": 4.67,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:09.359297",
+    "action": "hold",
+    "trigger_latency": 3.8,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:13.221729",
+    "action": "elevate",
+    "trigger_latency": 6.26,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": 82,
+    "applied_arp": 1
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:17.865237",
+    "action": "hold",
+    "trigger_latency": 4.61,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:22.189051",
+    "action": "relax",
+    "trigger_latency": 3.49,
+    "state": "NORMAL",
+    "applied_5qi": 85,
+    "applied_arp": 5
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:24.177577",
+    "action": "hold",
+    "trigger_latency": 3.86,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:25.278485",
+    "action": "hold",
+    "trigger_latency": 3.7,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:29.211814",
+    "action": "hold",
+    "trigger_latency": 3.37,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:32.862799",
+    "action": "hold",
+    "trigger_latency": 3.21,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:33.960832",
+    "action": "hold",
+    "trigger_latency": 3.21,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:35.426006",
+    "action": "hold",
+    "trigger_latency": 3.27,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:36.524200",
+    "action": "hold",
+    "trigger_latency": 3.46,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:41.164240",
+    "action": "hold",
+    "trigger_latency": 3.72,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:44.952246",
+    "action": "hold",
+    "trigger_latency": 3.24,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:49.006389",
+    "action": "hold",
+    "trigger_latency": 3.32,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:52.752869",
+    "action": "hold",
+    "trigger_latency": 3.38,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:19:57.100202",
+    "action": "elevate",
+    "trigger_latency": 5.39,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": 82,
+    "applied_arp": 1
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:01.945859",
+    "action": "hold",
+    "trigger_latency": 4.55,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:05.046297",
+    "action": "hold",
+    "trigger_latency": 9.07,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:08.718114",
+    "action": "hold",
+    "trigger_latency": 6.97,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:12.890451",
+    "action": "hold",
+    "trigger_latency": 5.77,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:17.313132",
+    "action": "hold",
+    "trigger_latency": 7.66,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:20.966612",
+    "action": "hold",
+    "trigger_latency": 6.47,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:22.097282",
+    "action": "hold",
+    "trigger_latency": 5.19,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:26.501107",
+    "action": "hold",
+    "trigger_latency": 4.91,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:30.605829",
+    "action": "hold",
+    "trigger_latency": 5.21,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:34.191046",
+    "action": "hold",
+    "trigger_latency": 4.24,
+    "state": "ELEVATED (CRITICAL)",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:38.430827",
+    "action": "relax",
+    "trigger_latency": 3.84,
+    "state": "NORMAL",
+    "applied_5qi": 85,
+    "applied_arp": 5
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:42.602097",
+    "action": "hold",
+    "trigger_latency": 3.94,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:47.345082",
+    "action": "hold",
+    "trigger_latency": 4.31,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  },
+  {
+    "slice": "URLLC",
+    "timestamp": "2026-04-05T17:20:51.084915",
+    "action": "hold",
+    "trigger_latency": 4.11,
+    "state": "NORMAL",
+    "applied_5qi": null,
+    "applied_arp": null
+  }
+]

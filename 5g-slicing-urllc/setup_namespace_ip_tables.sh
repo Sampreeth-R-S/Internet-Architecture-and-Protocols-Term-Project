@@ -18,8 +18,12 @@ for i in $(seq 0 10); do
 	sudo ip route add 10.45.0.0/16 dev "uesimtun$i" table "ue$i"
 done
 for i in $(seq 0 10); do
-	ue_ip_octet=$((2 + i))
-	sudo ip rule add from "10.45.0.$ue_ip_octet" table "ue$i"
+	ue_ip=$(ip -4 -o addr show dev "uesimtun$i" 2>/dev/null | awk '{print $4}' | cut -d/ -f1)
+	if [ -n "$ue_ip" ]; then
+		sudo ip rule add from "$ue_ip" table "ue$i"
+	else
+		echo "WARNING: uesimtun$i has no IPv4 address, skipping rule"
+	fi
 done
 for i in $(seq 0 10); do
 	sudo ip route replace 10.45.0.0/16 dev "uesimtun$i" table "ue$i"
@@ -50,9 +54,13 @@ ip route show table ue1
 sudo ip route flush cache
 ip route get 10.46.0.10 from 10.45.0.3
 for i in $(seq 0 10); do
-	ue_ip_octet=$((2 + i))
+	ue_ip=$(ip -4 -o addr show dev "uesimtun$i" 2>/dev/null | awk '{print $4}' | cut -d/ -f1)
 	priority=$((100 + i))
-	sudo ip rule add from "10.45.0.$ue_ip_octet" table "ue$i" priority "$priority"
+	if [ -n "$ue_ip" ]; then
+		sudo ip rule add from "$ue_ip" table "ue$i" priority "$priority"
+	else
+		echo "WARNING: uesimtun$i has no IPv4 address, skipping priority rule"
+	fi
 done
 sudo ip route flush cache
 ip rule
