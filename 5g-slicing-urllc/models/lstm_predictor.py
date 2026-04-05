@@ -33,8 +33,6 @@ EPOCHS        = 100
 BATCH_SIZE    = 32
 LR            = 0.001
 TEST_RATIO    = 0.2
-VAL_RATIO     = 0.1
-PATIENCE      = 15
 SMOOTH_WINDOW = 3       # Rolling-mean applied to target before training
 DATA_FRACTION = 0.5     # Use first 50% of rows to train/validate/test
 SEED          = 42
@@ -158,14 +156,12 @@ def train_and_evaluate():
     X, y = create_sequences(features, smooth_target, WINDOW_SIZE, HORIZON)
 
     n         = len(X)
-    train_end = int((1.0 - TEST_RATIO - VAL_RATIO) * n)
-    val_end   = int((1.0 - TEST_RATIO) * n)
+    train_end = int((1.0 - TEST_RATIO) * n)
 
-    X_train, y_train = X[:train_end],        y[:train_end]
-    X_val,   y_val   = X[train_end:val_end], y[train_end:val_end]
-    X_test,  y_test  = X[val_end:],          y[val_end:]
+    X_train, y_train = X[:train_end],  y[:train_end]
+    X_test,  y_test  = X[train_end:],  y[train_end:]
 
-    print(f"Samples – train: {len(X_train)}  val: {len(X_val)}  test: {len(X_test)}")
+    print(f"Samples – train: {len(X_train)}  test: {len(X_test)}")
 
     # ── Scaling ──────────────────────────────────────────────────────────────
     feat_scaler = MinMaxScaler()
@@ -183,14 +179,11 @@ def train_and_evaluate():
         return tgt_scaler.transform(arr.reshape(-1, 1)).reshape(s)
 
     X_train_s = scale_feat(X_train);  y_train_s = scale_tgt(y_train)
-    X_val_s   = scale_feat(X_val);    y_val_s   = scale_tgt(y_val)
     X_test_s  = scale_feat(X_test)
 
     # ── DataLoaders ──────────────────────────────────────────────────────────
     X_train_t = torch.FloatTensor(X_train_s)
     y_train_t = torch.FloatTensor(y_train_s)
-    X_val_t   = torch.FloatTensor(X_val_s)
-    y_val_t   = torch.FloatTensor(y_val_s)
     X_test_t  = torch.FloatTensor(X_test_s)
 
     train_loader = DataLoader(
@@ -203,14 +196,8 @@ def train_and_evaluate():
     model     = TrafficLSTM(N_FEATURES, HIDDEN_SIZE, NUM_LAYERS, HORIZON)
     criterion = nn.MSELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=LR)
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, patience=8, factor=0.5, min_lr=1e-5
-    )
 
-    train_losses, val_losses = [], []
-    best_val_loss  = float('inf')
-    best_state     = None
-    patience_count = 0
+    train_losses = []
 
     # ── Training loop ────────────────────────────────────────────────────────
     print("\nTraining:")
@@ -229,32 +216,11 @@ def train_and_evaluate():
         avg_train = epoch_loss / len(train_loader)
         train_losses.append(avg_train)
 
-        model.eval()
-        with torch.no_grad():
-            val_pred = model(X_val_t)
-            val_loss = criterion(val_pred, y_val_t).item()
-        val_losses.append(val_loss)
-        scheduler.step(val_loss)
-
-        if val_loss < best_val_loss:
-            best_val_loss  = val_loss
-            best_state     = {k: v.clone() for k, v in model.state_dict().items()}
-            patience_count = 0
-        else:
-            patience_count += 1
-
         if (epoch + 1) % 10 == 0:
             print(
                 f"  Epoch {epoch+1:3d}/{EPOCHS} | "
-                f"Train Loss: {avg_train:.6f} | "
-                f"Val Loss: {val_loss:.6f}"
+                f"Train Loss: {avg_train:.6f}"
             )
-
-        if patience_count >= PATIENCE:
-            print(f"  Early stopping at epoch {epoch+1}")
-            break
-
-    model.load_state_dict(best_state)
 
     # ── Evaluate ─────────────────────────────────────────────────────────────
     model.eval()
@@ -285,8 +251,7 @@ def train_and_evaluate():
         'horizon': HORIZON,
         'epochs': EPOCHS,
         'hidden_size': HIDDEN_SIZE,
-        'test_ratio': TEST_RATIO,
-        'val_ratio': VAL_RATIO
+        'test_ratio': TEST_RATIO
     }
     with open(os.path.join(save_dir, 'metrics.json'), 'w') as f:
         json.dump(metrics, f, indent=2)
@@ -317,8 +282,7 @@ def train_and_evaluate():
     fig, axes = plt.subplots(2, 1, figsize=(14, 8))
 
     axes[0].plot(train_losses, label='Train')
-    axes[0].plot(val_losses,   label='Val')
-    axes[0].set_title('Training / Validation Loss')
+    axes[0].set_title('Training Loss')
     axes[0].set_xlabel('Epoch')
     axes[0].set_ylabel('MSE Loss')
     axes[0].legend()

@@ -1,10 +1,9 @@
 {
-  "mae": 2.3378047943115234,
-  "rmse": 4.115439461919186,
+  "mae": 2.4477334022521973,
+  "rmse": 4.390325244160359,
   "window": 24,
   "horizon": 6,
   "epochs": 100,
   "hidden_size": 128,
-  "test_ratio": 0.2,
-  "val_ratio": 0.1
+  "test_ratio": 0.2
 }
