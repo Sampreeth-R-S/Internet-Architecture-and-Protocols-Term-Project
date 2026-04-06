@@ -78,7 +78,7 @@ def train_and_evaluate():
     set_seed(SEED)
 
     # Load data
-    data_path = os.path.join(BASE_DIR, '..', 'data', 'mmtc_traffic_timeseries.csv')
+    data_path = os.path.join(BASE_DIR, '..', 'data', 'lstm_controller_stats.csv')
     df = pd.read_csv(data_path)
 
     # mMTC key metric: packet_rate (connection density proxy)
@@ -141,10 +141,13 @@ def train_and_evaluate():
     model.eval()
     with torch.no_grad():
         preds = model(X_test_t).numpy()
+        train_preds = model(X_train_t).numpy()
 
     # Inverse scaling
     preds_inv = scaler.inverse_transform(preds.reshape(-1, 1)).reshape(preds.shape)
     y_test_inv = scaler.inverse_transform(y_test.reshape(-1, 1)).reshape(y_test.shape)
+    train_preds_inv = scaler.inverse_transform(train_preds.reshape(-1, 1)).reshape(train_preds.shape)
+    y_train_inv = scaler.inverse_transform(y_train.reshape(-1, 1)).reshape(y_train.shape)
 
     mae = mean_absolute_error(y_test_inv.flatten(), preds_inv.flatten())
     rmse = np.sqrt(mean_squared_error(y_test_inv.flatten(), preds_inv.flatten()))
@@ -190,9 +193,9 @@ def train_and_evaluate():
     axes[0].legend(['Train'])
     axes[0].grid(True, alpha=0.3)
 
-    axes[1].plot(y_test_inv[:100, 0], label='Actual', alpha=0.8)
-    axes[1].plot(preds_inv[:100, 0], label='Predicted', alpha=0.8)
-    axes[1].set_title('Prediction vs Actual (first 100 test samples, step-1)')
+    axes[1].plot(y_train_inv[:100, 0], label='Actual', alpha=0.8)
+    axes[1].plot(train_preds_inv[:100, 0], label='Predicted', alpha=0.8)
+    axes[1].set_title('Prediction vs Actual (first 100 samples, step-1)')
     axes[1].set_xlabel('Sample')
     axes[1].set_ylabel('Packet Rate (pps)')
     axes[1].legend()
