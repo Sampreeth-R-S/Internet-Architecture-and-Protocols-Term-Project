@@ -177,7 +177,7 @@ Expected: Replies from `10.45.0.1` (No replies will be available if the firewall
 pip3 install numpy pandas torch scikit-learn matplotlib
 ```
 
-### Step 2.2 - Generate synthetic training dataset
+### Step 2.2 - Generate training dataset
 
 ```bash
 cd ~/Desktop/5g-slicing-embb/traffic_gen
@@ -186,8 +186,7 @@ python collect_metrics.py
 Then in a second terminal:
 ```bash
 cd ~/Desktop/5g-slicing-embb/traffic_gen
-chmod +x netflix_4k_streaming.sh
-./netflix_4k_streaming.sh
+python3 netflix_4k_streaming.py
 ```
 
 
@@ -218,77 +217,5 @@ ls saved/
 
 ---
 
-## Phase 4: Run the Zero-Touch Controller
 
-```bash
-cd ~/Desktop/5g-slicing-embb/controller
-python3 zero_touch_controller.py
-```
-
-Expected output:
-- Prints EXPAND/CONTRACT decisions as it processes the dataset
-- Summary showing counts of expansions, contractions, holds
-- Saves decision log to `../data/controller_decisions.json`
-
-Verify:
-```bash
-cat ../data/controller_decisions.json | python3 -c "import sys,json; d=json.load(sys.stdin); print(f'Total: {len(d)} decisions'); print({a: sum(1 for x in d if x[\"action\"]==a) for a in ['expand','contract','hold']})"
-```
-
----
-
-## Phase 5: Evaluation & Visualization
-
-### Step 5.1 - Run baseline comparison
-
-```bash
-cd ~/Desktop/5g-slicing-embb/evaluation
-python3 compare_baselines.py
-```
-
-Expected: Table comparing Static vs Reactive vs Proactive metrics
-
-### Step 5.2 - Generate all visualization plots
-
-```bash
-cd ~/Desktop/5g-slicing-embb/visualization
-python3 dashboard.py
-```
-
-Expected: 4 plots saved:
-- `traffic_timeseries.png`
-- `controller_decisions.png`
-- `baseline_comparison_dashboard.png`
-- `slice_utilization_heatmap.png`
-
----
-
-## Optional: Live Traffic Collection (requires UERANSIM running)
-
-### Start iperf3 server:
-```bash
-# On the UPF machine (same machine in this case)
-iperf3 -s -p 5201 &
-```
-
-### Start data collector (Terminal A):
-```bash
-cd ~/Desktop/5g-slicing-embb/traffic_gen
-sudo python3 collect_metrics.py
-```
-
-### Start traffic generator (Terminal B):
-```bash
-cd ~/Desktop/5g-slicing-embb/traffic_gen
-chmod +x netflix_4k_streaming.sh
-sudo ./netflix_4k_streaming.sh
-```
-
-### Run controller in live mode (Terminal C):
-```bash
-cd ~/Desktop/5g-slicing-embb/controller
-python3 zero_touch_controller.py --live
-```
-
----
 
