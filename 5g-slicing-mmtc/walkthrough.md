@@ -46,7 +46,11 @@ Verify: Open `http://localhost:9999` in a browser. Login: **admin** / **1423**
 
 ### Step 1.4 - Configure mMTC Slice in Open5GS
 
+<<<<<<< HEAD
+You need to edit **two** config files to add the mMTC slice (`sst: 3`, `sd: 000003`).
+=======
 You need to edit **two** config files to add the mMTC slice (`sd: 000002`).
+>>>>>>> f3c1c30ef8652d3134ab471d44772c65f5fbd4fb
 If the eMBB slice (`sd: 000001`) is already configured, **add** the mMTC
 slice alongside it.
 
@@ -66,8 +70,13 @@ Find the `plmn_support` section and ensure **both** slices are listed:
       s_nssai:
         - sst: 1
           sd: 000001    # eMBB slice
+<<<<<<< HEAD
+        - sst: 3
+          sd: 000003    # mMTC slice
+=======
         - sst: 1
           sd: 000002    # mMTC slice
+>>>>>>> f3c1c30ef8652d3134ab471d44772c65f5fbd4fb
 ```
 
 #### Edit NSSF config:
@@ -86,8 +95,13 @@ Add the mMTC slice entry alongside eMBB:
             sd: 000001    # eMBB
         - uri: http://127.0.0.10:7777
           s_nssai:
+<<<<<<< HEAD
+            sst: 3
+            sd: 000003    # mMTC
+=======
             sst: 1
             sd: 000002    # mMTC
+>>>>>>> f3c1c30ef8652d3134ab471d44772c65f5fbd4fb
 ```
 
 #### Restart affected services:
@@ -112,8 +126,13 @@ sudo systemctl status open5gs-amfd open5gs-nssfd
    - **Key (K):** `465B5CE8B199B49FAA5F0A2EE238A6BC`
    - **OPC:** `E8ED289DEBA952E4283B54E88E6183CA`
 4. Scroll down to the **Slice Configuration** section:
+<<<<<<< HEAD
+   - **SST:** `3`
+   - **SD:** `000003`
+=======
    - **SST:** `1`
    - **SD:** `000002`
+>>>>>>> f3c1c30ef8652d3134ab471d44772c65f5fbd4fb
    - **DNN:** `internet`
    - **Session-AMBR Downlink:** `10` Mbps *(much lower than eMBB — IoT sensors don't need high bandwidth)*
    - **Session-AMBR Uplink:** `5` Mbps
@@ -179,6 +198,23 @@ ping -I uesimtun0 10.45.0.1 -c 5
 pip3 install numpy pandas torch scikit-learn matplotlib
 ```
 
+<<<<<<< HEAD
+### Step 2.2 - Generate mMTC training data
+
+**You need 2 separate terminals for this:**
+
+**Terminal A - Start data collector:**
+```bash
+cd ~/Desktop/5g-slicing-mmtc/traffic_gen
+python3 collect_metrics.py
+```
+
+**Terminal B - Start mMTC sensor traffic:**
+```bash
+cd ~/Desktop/5g-slicing-mmtc/traffic_gen
+python3 mmtc_sensor_traffic.py
+```
+=======
 ### Step 2.2 - Generate synthetic mMTC training dataset
 
 ```bash
@@ -191,10 +227,13 @@ This generates an mMTC traffic time-series with:
 - **Event-driven bursts** (alarm sensors triggering simultaneously)
 - **Periodic reporting spikes** (all smart meters reporting at once)
 - Low throughput (< 10 Mbps aggregate) but high packet rates (100-1500+ pps)
+>>>>>>> f3c1c30ef8652d3134ab471d44772c65f5fbd4fb
 
 Verify:
 ```bash
 wc -l ../data/mmtc_traffic_timeseries.csv
+<<<<<<< HEAD
+=======
 # Should show 8641 lines (8640 data + header)
 ```
 
@@ -212,6 +251,7 @@ python3 mmtc_sensor_traffic.py --sensors 1000 --duration 300
 In live mode (sends real UDP packets through the 5G tunnel):
 ```bash
 sudo python3 mmtc_sensor_traffic.py --sensors 100000 --duration 1200 --live --interface uesimtun0 --target 10.45.0.1 --port 9999 --loss-rate 0.02 --max-retries 2 --retry-delay-ms 25 --sleep-ratio 0.7 --sleep-period-s 300 --sleep-window-s 120 --seed 42
+>>>>>>> f3c1c30ef8652d3134ab471d44772c65f5fbd4fb
 ```
 
 ---
@@ -239,6 +279,8 @@ ls saved/
 ```
 
 ---
+<<<<<<< HEAD
+=======
 
 ## Phase 4: Run the Zero-Touch Controller
 
@@ -332,3 +374,4 @@ python3 zero_touch_controller.py --live
 | **Session-AMBR UL** | 50 Mbps | 5 Mbps |
 
 ---
+>>>>>>> f3c1c30ef8652d3134ab471d44772c65f5fbd4fb
